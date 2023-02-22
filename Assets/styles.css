@@ -4,6 +4,7 @@
         padding: 0;
         font-family: 'Courier New', Courier, monospace;
         margin-bottom: 10%;
+        z-index: 1;
     }
 
     footer {
@@ -13,13 +14,6 @@
     ::-webkit-scrollbar {
         width: 0px; 
       }      
-
-    header {
-        background-color: #da4167;
-        color: black;
-        padding: 20px;
-        text-align: center;
-    }
 
     h1 {
         margin: 0;
@@ -32,20 +26,9 @@
         font-family: 'Courier New', Courier, monospace;
     }
 
-    nav {
-        background-color: #f78764;
-        padding: 10px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
     ul {
         text-align: center;
         padding: 0;
-    }
-
-    ul h1 {
-        margin-top: 5%;
     }
 
     section {
@@ -58,9 +41,14 @@
         justify-content: center;
     }
 
+    .topbar {
+        display: inline;
+    }
+
     .leftist {
         margin: 20px;
         justify-content: left;
+        max-width: 50vw;
     }
 
     .card {
@@ -73,6 +61,7 @@
         padding: 10px;
         border-radius: 20px;
         margin: 20px;
+        z-index: 2;
     }
 
     .card a {
@@ -213,7 +202,14 @@
         left: 0;
         width: 100%;
         height: auto;
-        z-index: 999;
+    }
+
+    .caleb-corner {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: auto;
     }
 
     .slider-btn {
@@ -349,6 +345,12 @@
         object-fit: contain;
         max-width: 100%;
         max-height: 100%;
+    }
+
+    .content-title {
+        margin-top: 5%;
+        position: relative;
+        z-index: 1;
     }
 
 
