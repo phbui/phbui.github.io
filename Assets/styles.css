@@ -48,7 +48,6 @@
     .leftist {
         margin: 20px;
         justify-content: left;
-        max-width: 50vw;
     }
 
     .card {
@@ -213,7 +212,7 @@
     }
 
     .slider-btn {
-        max-width: 100px;
+        max-width: 12.5vw;
         border: none;
         background-color: transparent;
         transition: transform 1s ease;
@@ -348,7 +347,7 @@
     }
 
     .content-title {
-        margin-top: 5%;
+        margin-top: 20vh;
         position: relative;
         z-index: 1;
     }
