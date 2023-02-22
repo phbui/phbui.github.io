@@ -46,7 +46,6 @@
     }
 
     .leftist {
-        margin: 20px;
         justify-content: left;
     }
 
@@ -337,7 +336,7 @@
         display:block
     }
 
-    .additional-container.right.show a img{
+    .additional-container.right.show a img {
         display: block; 
         margin-left: auto; 
         margin-right: auto;
@@ -353,6 +352,19 @@
     }
 
 
+    @media screen and (max-width: 767px) {
+        .slider-btn {
+            max-width: 20vw;
+        }
 
+        .additional-container.right.show {
+            padding: 20px;
+            width: 40vw;
+        }
+
+        .additional-container.right.show a img {
+            margin-top: 30%;
+        }
+      }
 
     
