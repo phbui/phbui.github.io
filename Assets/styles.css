@@ -318,7 +318,6 @@
         max-width: 50%;
         max-height: 70%;
         height: auto;
-        margin-bottom: 5%;
     }
 
     .additional-container.middle.show ul p {
@@ -357,13 +356,17 @@
             max-width: 20vw;
         }
 
+        .slider-btn h4{
+            font-size: 20px;
+        }
+
         .additional-container.right.show {
             padding: 20px;
             width: 40vw;
         }
 
-        .additional-container.right.show a img {
-            margin-top: 30%;
+        .additional-container.right.show img{
+            margin-top: 10%;
         }
       }
 
