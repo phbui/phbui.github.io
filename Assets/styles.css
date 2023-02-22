@@ -133,7 +133,7 @@
         border-radius: 20px;
         display: none;
         cursor: zoom-in;
-        transition: transform 0.1s ease-out;
+        transition: transform 0.2s ease-out;
     }
 
     .slider .proj.active {
@@ -269,10 +269,10 @@
 
     .additional-container {
         position: absolute;
-        top: 130px;
+        top: 220px;
         bottom: 0;
         width: 0;
-        height: calc(100% - 130px);
+        height: calc(100% - 220px);
         transition: width 0.5s ease-in-out;
 
         background-color: #f4d35e;
