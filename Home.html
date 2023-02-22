@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Assets/styles.css">
+    <script src="Projects.js"></script>
+	<title>Φ Bui</title>
+</head>
+
+<body>
+	<header>
+		<h1>Philip Bui</h1>
+	</header>
+	<nav>►Φ◄</nav>
+    <div class="wrapper">
+
+        <section class="leftist">
+
+            <div class="container">
+                <button id="projects-btn" class="slider-btn" data-menu="projects-menu">
+                    <h4>Projects</h4>
+                    <img src="Assets/Buttons/cactus2.png" alt="Small Cactus">
+                </button>
+                <div id="projects-menu" class="slider-menu"></div>
+                <div class="additional-container left">
+                    <ul>
+                    <div id="projects" class="card">
+                        <div id="s1" class="slider">
+                            <img class="proj" src="Assets/Images/IQP/testing-day.png" alt="Project Image">
+                            <img class="proj" src="Assets/Images/IQP/gameplay1.png" alt="Project Image">
+                            <img class="proj" src="Assets/Images/IQP/gameplay2.png" alt="Project Image">
+                            <img class="proj" src="Assets/Images/IQP/models.png" alt="Project Image">
+                            <img class="proj" src="Assets/Images/IQP/food-production.png" alt="Project Image">
+                            <img class="proj" src="Assets/Images/IQP/plot-system.png" alt="Project Image">
+        
+                            <div class="arrow left">&lt;</div>
+                            <div class="arrow right">&gt;</div>
+                            
+                            <div class="dots">
+                              <div class="dot active"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                            </div>
+                        </div>
+                        <a href="https://github.com/IQP-NCPOGD/nitrocycle">
+                            <h2 class="link">Nitrogen Cycle Public Outreach AR Game</h2>
+                        </a>
+                        <h4>October 2022 - March 2023</h4>
+                        <h4>In collaboration with WPI’s Interactive Qualifying Project program & STEM Education Center.</h4>
+                    </div>
+
+                    <div id="projects" class="card">
+                        <div id="s2" class="slider">
+                            <img class="proj" src="Assets/Images/CS3733/homepage.png" alt="Home Page">
+                            <img class="proj" src="Assets/Images/CS3733/dashboard.png" alt="Dashboard">
+                            <img class="proj" src="Assets/Images/CS3733/map.png" alt="Interactive Map">
+                            <img class="proj" src="Assets/Images/CS3733/service-request.png" alt="Service Request Page">
+                            <img class="proj" src="Assets/Images/CS3733/ERD.png" alt="Entity Relation Diagram">
+                            <img class="proj" src="Assets/Images/CS3733/uml.png" alt="Unified Modeling Language Diagram">
+        
+                            <div class="arrow left">&lt;</div>
+                            <div class="arrow right">&gt;</div>
+                            
+                            <div class="dots">
+                              <div class="dot active"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                            </div>
+                        </div>
+                        <a href="https://github.com/phbui/BWH-Medical-Service-Request-System">
+                            <h2 class="link">Medical Service Request System</h2>
+                        </a>
+                        <h4>March 2022 - May 2022</h4>
+                        <h4>In collaboration with WPI’s CS3733 Software Engineering Course & Brigham and Women's Hospital.</h4>
+                    </div>
+
+                    <script>
+                        const slider1 = document.querySelector('#s1');
+                        const slider2 = document.querySelector('#s2');
+                    
+                        initSlider(slider1);
+                        initSlider(slider2);
+                    </script>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <button id="about-btn" class="slider-btn" data-menu="about-menu">
+                    <h4>About</h4>
+                    <img src="Assets/Buttons/structure.png" alt="Structure">
+                  </button>
+                <div id="about-menu" class="slider-menu"></div>
+                <div class="additional-container middle">
+                    <ul>
+                        <img src="Assets/Images/me.png"></img>
+                        <p>Hello there! I'm Phi, a first-generation Vietnamese-American college student 
+                        studying Computer Science at Worcester Polytechnic Institute. As a front-end 
+                        developer, I've mastered HTML, CSS, JavaScript, and frameworks like React to 
+                        create engaging user interfaces. Recently, I've developed an interest in software 
+                        development management, where my communication skills, attention to detail, 
+                        and task prioritization will make me an effective leader for any development team.
+                        </p>
+                    </ul>
+
+                </div>
+                
+            </div>
+              
+            <div class="container">
+                <button id="resume-btn" class="slider-btn" data-menu="resume-menu">
+                    <h4>Resume</h4>
+                    <img src="Assets/Buttons/cactus1.png" alt="Large Cactus">
+                </button> 
+                <div id="resume-menu" class="slider-menu"></div>
+                <div class="additional-container right">
+                    <a href="https://docs.google.com/document/d/1v7MNilWt4X2YIF8dbVBp25v1J-pv8c6s/edit?usp=sharing&ouid=101488911286131646148&rtpof=true&sd=true">
+                        <img src="Assets/Images/Philip Bui Resume - February 2023.png">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <ul>
+            <h1>Contact</h1>
+            <section class="centered">
+                <div id="contact" class="card">
+                    <a href="mailto:bilphui@gmail.com?subject=Your%20Subject&body=Your%20Message%20Here" target="blank">
+                        <button >
+                            <img src="Assets/Buttons/email.png" alt="Email">
+                        </button>
+                    </a>
+                    <h2>Email</h2>
+                </div>
+    
+                <div id="contact" class="card">
+                    <a href="https://www.linkedin.com/in/phi-bui/" target="_blank">
+                        <button>
+                            <img src="Assets/Buttons/linkedin.png" alt="LinkedIn">
+                        </button>
+                    </a>
+                    <h2>LinkedIn</h2>
+                </div>
+    
+                <div id="contact" class="card">
+                    <a href="https://github.com/phbui" target="blank">
+                        <button >
+                            <img src="Assets/Buttons/github.png" alt="GitHub">
+                        </button>
+                    </a>
+                    <h2>GitHub</h2>
+                </div>
+            </section> 
+        </ul>
+
+
+        <script src="Home.js"></script>
+    </div>
+    <footer>
+        <p>Copyright 2023 © Philip Bui</p>
+    </footer>
+    <img src="Assets/bottom-header-alt.png" alt="Hills" class="fixed-image">
+</body>
+</html>
