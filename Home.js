@@ -23,7 +23,7 @@ buttons.forEach((button, index) => {
           container.classList.remove('active');
         });
         isMenuActive = false;
-      }, 400); 
+      }, 500); 
     } else {
       if (activeMenu) {
         const currentAdditionalContainer = activeAdditionalContainer;
