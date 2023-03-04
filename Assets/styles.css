@@ -9,6 +9,7 @@
 
     footer {
         text-align: center;
+        z-index: -1;
     }
 
     ::-webkit-scrollbar {
@@ -201,6 +202,7 @@
         left: 0;
         width: 100%;
         height: auto;
+        z-index: -1;
     }
 
     .caleb-corner {
@@ -345,12 +347,11 @@
         max-height: 100%;
     }
 
+
     .content-title {
-        margin-top: 20vh;
         position: relative;
         z-index: 1;
     }
-
 
     @media screen and (max-width: 1300px) {
         .slider-btn {
