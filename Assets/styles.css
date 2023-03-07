@@ -354,6 +354,14 @@
         z-index: 1;
     }
 
+    #metamorphosis {
+        width: 90%;
+        height: 600px;
+        border: inset;
+        border-width: 10px;
+        margin-top: 20px;
+    }
+
     @media screen and (max-width: 1300px) {
         .slider-btn {
             max-width: 20vw;
