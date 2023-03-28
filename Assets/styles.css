@@ -399,8 +399,8 @@
 
     @media screen and (max-width: 1300px) {
 
-        #wakatime {
-            transform: scale(0.5);
+        #wakatime ul {
+            transform: scale(0.7);
         }
 
         .slider-btn {
