@@ -399,8 +399,8 @@
 
     @media screen and (max-width: 1300px) {
 
-        #walkatime {
-            transform: scale(0.7);
+        #walkatime ul{
+            transform: scale(0.5);
         }
 
         .slider-btn {
