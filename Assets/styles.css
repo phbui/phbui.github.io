@@ -356,6 +356,12 @@
         z-index: 1;
     }
 
+    #mid {
+        position: relative;
+        margin-top: 20vh;
+        height: fit-content;
+    }
+
     #wakatime {
         margin-left: 0;
         margin-right: auto;
@@ -366,12 +372,6 @@
         width: fit-content;
         margin-left: auto;
         margin-right: 0;
-    }
-
-    #mid {
-        position: relative;
-        margin-top: 20vh;
-        height: fit-content;
     }
 
     #tv {
@@ -399,8 +399,24 @@
 
     @media screen and (max-width: 1300px) {
 
-        #walkatime ul{
-            transform: scale(0.5);
+        #walkatime {
+            margin-left: auto;
+            width: 100%;
+        }
+
+        #walkatime ul {
+            width: 100%;
+            margin-right: auto;
+        }
+
+        #tv {
+            position: relative;
+            width: 100%;
+            height: fit-content;
+        }
+        #tv .card {
+            width: 100%;
+            height: 100%;
         }
 
         .slider-btn {
