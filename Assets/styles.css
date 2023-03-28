@@ -398,17 +398,29 @@
     }
 
     @media screen and (max-width: 1300px) {
-
-        #wakatime ul {
-            width: fit-content;
-            margin-right: 0;
-            margin-left: auto;
-            transform: scale(.75);
+        
+        #mid {
+            text-align: center;
         }
-
+        #wakatime {
+            margin-left: auto;
+            width: 100%;
+        }
+        #wakatime ul {
+            width: 100%;
+            margin-right: auto;
+        }
         #tv {
+            position: relative;
+            text-align: center;
+            width: 100%;
             height: fit-content;
         }
+        #tv .card {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }   
 
         .slider-btn {
             max-width: 20vw;
