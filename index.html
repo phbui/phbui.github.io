@@ -20,13 +20,13 @@
                 <div class="additional-container left">
                     <ul>
                     <div id="projects" class="card">
-                        <div id="s1" class="slider">
-                            <img class="proj" src="Assets/Images/IQP/testing-day.png" alt="Project Image">
-                            <img class="proj" src="Assets/Images/IQP/gameplay1.png" alt="Project Image">
-                            <img class="proj" src="Assets/Images/IQP/gameplay2.png" alt="Project Image">
-                            <img class="proj" src="Assets/Images/IQP/models.png" alt="Project Image">
-                            <img class="proj" src="Assets/Images/IQP/food-production.png" alt="Project Image">
-                            <img class="proj" src="Assets/Images/IQP/plot-system.png" alt="Project Image">
+                        <div id="iqp" class="slider">
+                            <img class="proj" src="Assets/Images/IQP/testing-day.png" alt="Testing Day">
+                            <img class="proj" src="Assets/Images/IQP/gameplay1.png" alt="Gameplay">
+                            <img class="proj" src="Assets/Images/IQP/gameplay2.png" alt="More Gameplay">
+                            <img class="proj" src="Assets/Images/IQP/models.png" alt="3D Model">
+                            <img class="proj" src="Assets/Images/IQP/food-production.png" alt="Food Production Storyboard">
+                            <img class="proj" src="Assets/Images/IQP/plot-system.png" alt="Plot System Storyboard">
         
                             <div class="arrow left">&lt;</div>
                             <div class="arrow right">&gt;</div>
@@ -40,15 +40,14 @@
                               <div class="dot"></div>
                             </div>
                         </div>
-                        <a href="https://github.com/IQP-NCPOGD/nitrocycle">
-                            <h2 class="link">🔗 Nitrogen Cycle Public Outreach AR Game</h2>
+                        <a id="link" href="https://github.com/IQP-NCPOGD/nitrocycle">
+                            <h2 id="link-text" class="link">🔗 Nitrogen Cycle Public Outreach AR Game</h2>
                         </a>
-                        <h4>October 2022 - March 2023</h4>
-                        <h4>In collaboration with WPI’s Interactive Qualifying Project program & STEM Education Center.</h4>
+                        <h4 id="date">October 2022 - April 2023</h4>
+                        <h4 id="collab">In collaboration with WPI’s Interactive Qualifying Project program & STEM Education Center.</h4>
                     </div>
-
                     <div id="projects" class="card">
-                        <div id="s2" class="slider">
+                        <div id="swe" class="slider">
                             <img class="proj" src="Assets/Images/CS3733/homepage.png" alt="Home Page">
                             <img class="proj" src="Assets/Images/CS3733/dashboard.png" alt="Dashboard">
                             <img class="proj" src="Assets/Images/CS3733/map.png" alt="Interactive Map">
@@ -68,24 +67,15 @@
                               <div class="dot"></div>
                             </div>
                         </div>
-                        <a href="https://github.com/phbui/BWH-Medical-Service-Request-System">
-                            <h2 class="link">🔗 Medical Service Request System</h2>
+                        <a id="link" href="https://github.com/phbui/BWH-Medical-Service-Request-System">
+                            <h2 id="link-text" class="link">🔗 Medical Service Request System</h2>
                         </a>
-                        <h4>March 2022 - May 2022</h4>
-                        <h4>In collaboration with WPI’s CS3733 Software Engineering Course & Brigham and Women's Hospital.</h4>
+                        <h4 id="date">March 2022 - May 2022</h4>
+                        <h4 id="collab">In collaboration with WPI’s CS3733 Software Engineering Course & Brigham and Women's Hospital.</h4>
                     </div>
-
-                    <script>
-                        const slider1 = document.querySelector('#s1');
-                        const slider2 = document.querySelector('#s2');
-                    
-                        initSlider(slider1);
-                        initSlider(slider2);
-                    </script>
                     </ul>
                 </div>
             </div>
-
             <div class="container">
                 <button id="about-btn" class="slider-btn" data-menu="about-menu">
                     <h4>About</h4>
@@ -107,7 +97,6 @@
                 </div>
                 
             </div>
-              
             <div class="container">
                 <button id="resume-btn" class="slider-btn" data-menu="resume-menu">
                     <h4>Resume</h4>
@@ -121,38 +110,75 @@
                 </div>
             </div>
         </section>
-
         <ul style="z-index: 2;">
-            <ul style="margin-top: 20vh;">
-                <picture>
-                    <source 
-                      srcset="https://github-readme-stats.vercel.app/api/wakatime?username=objectivephi&bg_color=3f6071&text_color=ebebd3&title_color=f78764&border_radius=20px&border_color=3f6071&icon_color=da4167"
-                      media="(prefers-color-scheme: dark)"
-                    />
-                    <img src="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true" />                   
-                </picture>
-            </ul>
+            <div id="mid">
+                <div id="wakatime">
+                    <ul>
+                        <picture>
+                            <source 
+                              srcset="https://github-readme-stats.vercel.app/api/wakatime?username=objectivephi&bg_color=3f6071&text_color=ebebd3&title_color=f78764&border_radius=20px&border_color=3f6071&icon_color=da4167"
+                              media="(prefers-color-scheme: dark)"
+                            />
+                            <img src="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true" />                   
+                        </picture>
+                    </ul>
+            
+                    <ul>
+                        <picture>
+                            <source 
+                              srcset="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true&bg_color=3f6071&text_color=ebebd3&title_color=f78764&border_radius=20px&border_color=3f6071&icon_color=da4167&include_all_commits=true"
+                              media="(prefers-color-scheme: dark)"
+                            />
+                            <img src="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true" />
+                        </picture>
+                    </ul>
+            
+                    <ul>
+                        <picture>
+                            <source 
+                              srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=phbui&bg_color=3f6071&text_color=ebebd3&title_color=f78764&border_radius=20px&border_color=3f6071&icon_color=da4167&langs_count=10&layout=compact"
+                              media="(prefers-color-scheme: dark)"
+                            />
+                            <img src="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true" />                   
+                        </picture>
+                    </ul>
+                </div>
+                <div id="tv">
+                    <div id="projects" class="card">
+                        <div id="web" class="slider">
+                            <img class="proj" src="Assets\Images\Websites\memoirspathos.png" alt="Metamorphosis"
+                                data-link="https://memoirspathos.art/"
+                                data-text="Metamorphosis"
+                                data-date="February 2023"
+                                data-collab="In collaboration with Hami Trinh.">
+                            <img class="proj" src="Assets\Images\Websites\viv.jpg" alt="WPI Powerlifting"
+                                data-link="https://wpi-powerlifting.github.io/"
+                                data-text="WPI Powerlifting"
+                                data-date="March 2023"
+                                data-collab="In collaboration with WPI Powerlifting.">
+                            <img class="proj" src="Assets\Images\Websites\wpipl.jpg" alt="Vivian Tran's Portfolio"
+                                data-link="https://viviantran-portfolio.github.io/"
+                                data-text="Vivian Tran's Portfolio"
+                                data-date="March 2023"
+                                data-collab="In collaboration with Vivian Tran.">
     
-            <ul>
-                <picture>
-                    <source 
-                      srcset="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true&bg_color=3f6071&text_color=ebebd3&title_color=f78764&border_radius=20px&border_color=3f6071&icon_color=da4167&include_all_commits=true"
-                      media="(prefers-color-scheme: dark)"
-                    />
-                    <img src="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true" />
-                </picture>
-            </ul>
-    
-            <ul>
-                <picture>
-                    <source 
-                      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=phbui&bg_color=3f6071&text_color=ebebd3&title_color=f78764&border_radius=20px&border_color=3f6071&icon_color=da4167&langs_count=10&layout=compact"
-                      media="(prefers-color-scheme: dark)"
-                    />
-                    <img src="https://github-readme-stats.vercel.app/api?username=phbui&show_icons=true" />                   
-                </picture>
-            </ul>
-    
+                            <div class="arrow left">&lt;</div>
+                            <div class="arrow right">&gt;</div>
+                            
+                            <div class="dots">
+                              <div class="dot active"></div>
+                              <div class="dot"></div>
+                              <div class="dot"></div>
+                            </div>
+                        </div>
+                        <a id="link" href="">
+                            <h2 id="link-text" class="link"></h2>
+                        </a>
+                        <h4 id="date"></h4>
+                        <h4 id="collab"></h4>
+                    </div>
+                </div>
+            </div>
             <ul style="margin-top: 20vh;">
                 <h1>Contact</h1>
                 <section class="centered">
@@ -164,7 +190,6 @@
                         </a>
                         <h2>Email</h2>
                     </div>
-        
                     <div id="contact" class="card">
                         <a href="https://www.linkedin.com/in/phi-bui/" target="_blank">
                             <button>
@@ -185,9 +210,16 @@
                 </section> 
             </ul>
         </ul>
-
-
         <script src="Home.js"></script>
+        <script>
+            const iqp = document.querySelector('#iqp');
+            const swe = document.querySelector('#swe');
+            const web = document.querySelector('#web');
+        
+            initSlider(iqp);
+            initSlider(swe);
+            initSlider(web);
+        </script>
     </div>
     <footer>
         <p>Copyright 2023 © Philip Bui</p>
