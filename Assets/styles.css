@@ -392,30 +392,30 @@
         height: auto;
     }
 
-    #tv iframe {
-        width: 800px;
-        border: none;
-    }
-
     @media screen and (max-width: 1300px) {
         
         #mid {
             text-align: center;
         }
+
         #wakatime {
             margin-left: auto;
             width: 100%;
         }
+
         #wakatime ul {
             width: 100%;
             margin-right: auto;
         }
+
         #tv {
             position: relative;
+            right: 0;
             text-align: center;
             width: 100%;
             height: fit-content;
         }
+
         #tv .card {
             margin: auto;
             width: 100%;
