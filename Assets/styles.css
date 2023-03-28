@@ -399,6 +399,10 @@
 
     @media screen and (max-width: 1300px) {
 
+        #mid {
+            text-align: center;
+        }
+
         #walkatime {
             margin-left: auto;
             width: 100%;
