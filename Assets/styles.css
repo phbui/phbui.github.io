@@ -400,7 +400,10 @@
     @media screen and (max-width: 1300px) {
 
         #wakatime ul {
-            transform: scale(0.8);
+            width: fit-content;
+            margin-right: 0;
+            margin-left: auto;
+            transform: scale(.75);
         }
 
         #tv {
