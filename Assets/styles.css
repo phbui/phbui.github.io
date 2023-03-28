@@ -399,28 +399,8 @@
 
     @media screen and (max-width: 1300px) {
 
-        #mid {
-            text-align: center;
-        }
-
         #wakatime {
-            margin-left: auto;
-            width: 100%;
-        }
-
-        #wakatime ul {
-            width: 100%;
-            margin-right: auto;
-        }
-
-        #tv {
-            position: relative;
-            width: 100%;
-            height: fit-content;
-        }
-        #tv .card {
-            width: 100%;
-            height: 100%;
+            transform: scale(0.5);
         }
 
         .slider-btn {
