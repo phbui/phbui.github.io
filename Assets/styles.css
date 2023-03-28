@@ -389,7 +389,7 @@
     }
 
     #tv .slider {
-        height: 75%;
+        height: auto;
     }
 
     #tv iframe {
