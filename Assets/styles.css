@@ -403,6 +403,10 @@
             transform: scale(0.8);
         }
 
+        #tv {
+            height: fit-content;
+        }
+
         .slider-btn {
             max-width: 20vw;
         }
