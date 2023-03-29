@@ -389,7 +389,7 @@
     }
 
     #tv .slider {
-        height: auto;
+        height: 75%;
     }
 
     @media screen and (max-width: 1300px) {
