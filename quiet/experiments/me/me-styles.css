@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+body {
+    background-color: rgba(0,0,0,0.92);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.20);
+    animation: ScreenEffect 0.05s ease infinite;
+    pointer-events: none;
+}
+
+.container {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+}
+
+.container > div {
+    margin: 5vh 0 5vh 0;
+}
+
+.left {
+    width: 16vw;
+    height: 90%;
+}
+
+.who {
+    position: absolute;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 150px;
+    color: #FE2146;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+    white-space:nowrap;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(254, 33, 70,0.25), 0 0 15px rgb(254, 33, 70, 0.5);
+}
+
+.middle {
+    width: 5%;
+    height: 90%;
+    text-align: left;
+}
+
+.middle p {
+    margin: 0;
+    color: #FFBD39;
+    text-shadow: 0 0 5px rgb(254, 33, 70,0.25), 0 0 15px rgb(254, 33, 70, 0.5);
+}
+
+.right {
+    width: 90%;
+    height: 90%;
+}
+
+#matrix {
+    top: -10px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 61%;
+    overflow: hidden;
+}
+
+.vitals {
+    position: relative;
+    width: 38.24%;
+    height: 100%;
+    text-shadow: 0 0 5px rgb(254, 33, 70,0.25), 0 0 15px rgb(254, 33, 70, 0.5);
+    
+}
+
+.vitals img {
+    position: relative;
+    left: 0;
+    width: 100%;
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgb(255, 255, 255, 0.25), 0 0 15px rgb(255, 255, 255, 0.5);
+    filter: contrast(2);
+}
+
+.vitals p {
+    color: #FFBD39;
+    text-shadow: 0 0 5px rgb(254, 33, 70,0.25), 0 0 15px rgb(254, 33, 70, 0.5);
+}
+
+.vitals .heart-rate {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border: 2px solid #FFBD39;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(255, 189, 57, 0.25), 0 0 15px rgb(255, 189, 57, 0.5);
+}
+
+.vitals .heart-rate svg {
+    position: absolute;
+    width: 80%;
+    left: 0;
+    top: 20px;
+}
+
+.fade-in {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 100%;    
+    height: 100%;
+    background-color: rgba(20,20,20);
+    animation: heartRateIn 4.5s linear infinite;
+}
+
+.heart {
+    position: absolute;
+    width: 30%;
+    top: 0;
+    right: 0;
+}
+
+.heart p {
+    position: absolute;
+    color: #FE2146;
+    margin: 0;
+    padding: 0;
+}
+
+.heart #a{
+    font-size: 70px;
+    top: -10px;
+    right: 5px;
+}
+
+.heart #b{
+    font-size: 32px;
+    top: 65px;
+    right: 47.5px;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+    text-decoration: underline;
+}
+
+.heart #c{
+    font-size: 45px;
+    top: 65px;
+    right: -5px;
+    writing-mode:vertical-rl;
+}
+
+.waters {
+    top: 5%;
+    left: 52%;
+    position: absolute;
+    width: 20%;
+    height: 89.25%;
+    border: 2px solid #FE2146;
+    --mask: repeating-linear-gradient(45deg, rgb(0 0 0), rgb(0 0 0 / 0.55) 20%, rgb(0 0 0) 40%);
+    --stop1: 3%;
+    --stop2: 95%;
+    --bgSize: 2rem;
+    --bgPosition: calc(var(--bgSize) / 2);
+    aspect-ratio: 1;
+    background: black;
+    filter: contrast(50);
+    box-shadow: 0 0 5px rgb(254, 33, 70,0.25), 0 0 15px rgb(254, 33, 70, 0.5);
+}
+
+.waters::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at center, rgb(254, 33, 70) var(--stop1), transparent var(--stop2)), radial-gradient(circle at center, rgb(254, 33, 70) var(--stop1), transparent var(--stop2));
+    background-size: var(--bgSize) calc(1.2 * var(--bgSize));
+    background-position: 0 0, var(--bgPosition) var(--bgPosition);
+    mask-image: var(--mask);
+}
+
+.meta {
+    position: absolute;
+    padding-top: 5px;
+    bottom: 11%;
+    left: 74%;
+    width: 15%;
+    height: 45%;
+}
+
+.meta p {
+    margin: 0;
+    font-size: 18.5px;
+    white-space: nowrap;
+    color: white;
+    text-shadow: 0 0 5px rgb(255, 255, 255, 0.25), 0 0 15px rgb(255, 255, 255, 0.5);
+}
+
+.hami {
+    position: absolute;
+    padding-top: 25px;
+    bottom: 5%;
+    left: 74%;
+    width: 15%;
+    height: 45%;
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgb(255, 255, 255, 0.25), 0 0 15px rgb(255, 255, 255, 0.5);
+}
+
+.hami img {
+    filter: contrast(2) brightness(2) saturate(0);
+}
+
+.collab {
+    position: absolute;
+    padding-top: 5px;
+    bottom: 5%;
+    left: 91%;
+    width: 15%;
+    height: 45%;
+}
+
+.collab p {
+    margin: 0;
+    font-size: 30px;
+    white-space: nowrap;
+    color: white;
+    writing-mode:vertical-rl;
+    text-shadow: 0 0 5px rgb(255, 255, 255, 0.25), 0 0 15px rgb(255, 255, 255, 0.5);
+}
+
+.return {
+    position: absolute;
+    top: 2.5%;
+    right: 2.2%;
+}
+
+.return a {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    text-align: left;
+    white-space: nowrap;
+    color: #FFBD39;
+    text-shadow: 0 0 5px rgb(255, 189, 57, 0.25), 0 0 15px rgb(255, 189, 57, 0.5);
+    text-decoration: none;
+}
+
+.return a:hover{
+    text-decoration: underline;
+    user-select: all;
+    z-index: 10;
+    color: white;
+}
+
+.raw {
+    position: absolute;
+    top: 4%;
+    left: 74%;
+    width: 50%;
+    height: 45%;
+}
+
+.raw p {
+    margin: 0;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-align: left;
+    white-space: nowrap;
+    color: #FFBD39;
+    text-shadow: 0 0 5px rgb(255, 189, 57, 0.25), 0 0 15px rgb(255, 189, 57, 0.5);
+}
+
+.style1 {
+    position: absolute;
+    bottom: 5%;
+    left: 95.5%;
+    width: 25%;
+    height: 86%;
+}
+
+.style1 p {
+    z-index: 1;
+    margin: 0;
+    font-size: 30px;
+    writing-mode: vertical-lr;
+    color: #FFBD39;
+    text-shadow: 0 0 5px rgb(255, 189, 57, 0.25), 0 0 15px rgb(255, 189, 57, 0.5);
+}
+
+.style2 {
+    position: absolute;
+    bottom: 5%;
+    left: 96.5%;
+    width: 25%;
+    height: 86%;
+}
+
+.style2 p {
+    z-index: 1;
+    margin: 0;
+    font-size: 30px;
+    writing-mode: vertical-lr;
+    color: #FFBD39;
+    text-shadow: 0 0 5px rgb(255, 189, 57, 0.25), 0 0 15px rgb(255, 189, 57, 0.5);
+}
+  
+  @keyframes heartRateIn {
+    0% {
+      width: 100%;
+    }
+    50% {
+      width: 0%;
+    }
+    100% {
+      width: 0%;
+    }
+    
+  }
+
+  @keyframes ScreenEffect {
+    0% { opacity: 0 }
+    50% { opacity: 1 }
+    100% { opacity: 0 }
+  }
