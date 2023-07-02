@@ -1,13 +1,26 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { debounce } from 'lodash';
+import TWEEN from '@tweenjs/tween.js';
 
 const ModelViewer = React.memo(() => {
   const containerRef = useRef(null);
   const sceneRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
+  const defaultX = 0;
+  const defaultY = 0.7;
+  const defaultZ = 1.25;
+
+  const cameraPositionsAndRotations = [
+    { position: { x: 0, y: 0, z: 1 }, rotation: { x: 0, y: 0, z: 0 } },
+    { position: { x: 1, y: 1, z: 1 }, rotation: { x: 0, y: 0, z: 1 } },
+    { position: { x: 2, y: 2, z: 1 }, rotation: { x: 0, y: 0, z: 2 } },
+    // Add more as needed
+  ];
+
+  const [currentCameraSettingIndex, setCameraSettingIndex] = useState(0);
 
   const fpsLimit = 30; // limit to 30 frames per second
   let then = 0;
@@ -18,6 +31,7 @@ const ModelViewer = React.memo(() => {
   
     if (elapsed > fpsInterval) {
       then = now - (elapsed % fpsInterval);
+      TWEEN.update();
       rendererRef.current.render(sceneRef.current, cameraRef.current);
     }
     requestAnimationFrame(animate);
@@ -28,11 +42,42 @@ const ModelViewer = React.memo(() => {
     cameraRef.current.updateProjectionMatrix();
     rendererRef.current.setSize(window.innerWidth, window.innerHeight);
   }, 200), []);
-
+  
   const handleScroll = useCallback((event) => {
     const delta = Math.sign(event.deltaY);
-    sceneRef.current.rotation.y += delta * 0.1; // Lowered to 0.1 to decrease amount of rotation per event.
-  }, []);
+    let nextIndex = currentCameraSettingIndex + delta;
+  
+    // Ensure index is within bounds of our array
+    nextIndex = Math.max(0, nextIndex);
+    nextIndex = Math.min(cameraPositionsAndRotations.length - 1, nextIndex);
+  
+    if (nextIndex !== currentCameraSettingIndex) {
+      const currentPosition = { x: cameraRef.current.position.x, y: cameraRef.current.position.y, z: cameraRef.current.position.z };
+      const currentRotation = { x: cameraRef.current.rotation.x, y: cameraRef.current.rotation.y, z: cameraRef.current.rotation.z };
+  
+      new TWEEN.Tween(currentPosition)
+        .to(cameraPositionsAndRotations[nextIndex].position, 2000)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(() => {
+          cameraRef.current.position.set(currentPosition.x, currentPosition.y, currentPosition.z);
+        })
+        .start();
+  
+      new TWEEN.Tween(currentRotation)
+        .to(cameraPositionsAndRotations[nextIndex].rotation, 2000)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(() => {
+          cameraRef.current.rotation.set(currentRotation.x, currentRotation.y, currentRotation.z);
+        })
+        .start();
+  
+      setCameraSettingIndex(nextIndex);
+    }
+    console.log(`Current camera position: x=${cameraRef.current.position.x}, y=${cameraRef.current.position.y}, z=${cameraRef.current.position.z}`);
+    console.log(`Current camera rotation: x=${cameraRef.current.rotation.x}, y=${cameraRef.current.rotation.y}, z=${cameraRef.current.rotation.z}`);
+  
+  }, [currentCameraSettingIndex]);
+  
 
   useEffect(() => {
     let scene, camera, renderer;
@@ -62,14 +107,14 @@ const ModelViewer = React.memo(() => {
 
       mesh.rotation.x = -Math.PI / 2;
       mesh.scale.set(0.01, 0.01, 0.01); // Lowered scale to make the model smaller.
-      mesh.position.z = -0.25;
 
       scene.add(mesh);
     });
 
     // Set up camera position
-    camera.position.z = 0.3;
-    camera.position.y = 1;
+    camera.position.x = defaultX;
+    camera.position.y = defaultY;
+    camera.position.z = defaultZ;
 
     // Animation loop
     animate();
@@ -85,7 +130,7 @@ const ModelViewer = React.memo(() => {
         containerRef.current.removeChild(renderer.domElement);
       }
     };
-  }, [animate, handleResize, handleScroll]);
+  }, [animate, handleResize, handleScroll, currentCameraSettingIndex]);
 
   return <div ref={containerRef} />;
 });
