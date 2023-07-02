@@ -65,7 +65,8 @@ const ModelViewer = React.memo(() => {
 
     const handleScroll = (event) => {
       const delta = Math.sign(event.deltaY);
-      scene.rotation.y += delta * 0.25;
+      scene.rotation.y += delta * 0.2;
+      console.log(scene.rotation.y)
     };
 
     window.addEventListener('resize', handleResize);
