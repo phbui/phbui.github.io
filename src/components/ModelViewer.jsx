@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
+import { debounce } from 'lodash';
 
 const ModelViewer = React.memo(() => {
   const containerRef = useRef(null);
@@ -8,9 +9,29 @@ const ModelViewer = React.memo(() => {
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
 
-  const animate = useCallback(() => {
+  const fpsLimit = 30; // limit to 30 frames per second
+  let then = 0;
+  
+  const animate = useCallback((now = 0) => {
+    const elapsed = now - then;
+    const fpsInterval = 1000 / fpsLimit;
+  
+    if (elapsed > fpsInterval) {
+      then = now - (elapsed % fpsInterval);
+      rendererRef.current.render(sceneRef.current, cameraRef.current);
+    }
     requestAnimationFrame(animate);
-    rendererRef.current.render(sceneRef.current, cameraRef.current);
+  }, []);
+
+  const handleResize = useCallback(debounce(() => {
+    cameraRef.current.aspect = window.innerWidth / window.innerHeight;
+    cameraRef.current.updateProjectionMatrix();
+    rendererRef.current.setSize(window.innerWidth, window.innerHeight);
+  }, 200), []);
+
+  const handleScroll = useCallback((event) => {
+    const delta = Math.sign(event.deltaY);
+    sceneRef.current.rotation.y += delta * 0.1; // Lowered to 0.1 to decrease amount of rotation per event.
   }, []);
 
   useEffect(() => {
@@ -19,7 +40,7 @@ const ModelViewer = React.memo(() => {
     // Create a scene, camera, and renderer
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    renderer = new THREE.WebGLRenderer({ antialias: true, precision: 'lowp', alpha: false });
+    renderer = new THREE.WebGLRenderer({ antialias: false, precision: 'lowp', alpha: false }); // Antialiasing off
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0xffffff); // Set background color to white
 
@@ -32,42 +53,26 @@ const ModelViewer = React.memo(() => {
       containerRef.current.appendChild(renderer.domElement);
     }
 
-    // Add a light
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(1, 1, 1);
-    scene.add(light);
-
     // Load the model
     const loader = new STLLoader();
-    loader.load('src/assets/unicorn_A.stl', (geometry) => {
+    loader.load('src/assets/gundam.stl', (geometry) => {
       const material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true, wireframeLinewidth: 0.5});
       const mesh = new THREE.Mesh(geometry, material);
       mesh.frustumCulled = true;
 
       mesh.rotation.x = -Math.PI / 2;
-      mesh.position.z = -1;
+      mesh.scale.set(0.01, 0.01, 0.01); // Lowered scale to make the model smaller.
+      mesh.position.z = -0.25;
 
       scene.add(mesh);
     });
 
     // Set up camera position
-    camera.position.z = 1.75;
+    camera.position.z = 0.3;
     camera.position.y = 1;
 
     // Animation loop
     animate();
-
-    const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    };
-
-    const handleScroll = (event) => {
-      const delta = Math.sign(event.deltaY);
-      scene.rotation.y += delta * 0.2;
-      console.log(scene.rotation.y)
-    };
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('wheel', handleScroll);
@@ -80,7 +85,7 @@ const ModelViewer = React.memo(() => {
         containerRef.current.removeChild(renderer.domElement);
       }
     };
-  }, [animate]);
+  }, [animate, handleResize, handleScroll]);
 
   return <div ref={containerRef} />;
 });
