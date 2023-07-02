@@ -159,7 +159,7 @@ is responsible for setting up the initial state of the 3D model viewer. */
     path of the STL model and a callback function. */
     const loader = new STLLoader();
     loader.load('src/assets/gundam.stl', (geometry) => {
-      const material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true, wireframeLinewidth: 0.5});
+      const material = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, wireframe: true, wireframeLinewidth: 10});
       const mesh = new THREE.Mesh(geometry, material);
       mesh.frustumCulled = true;
 
