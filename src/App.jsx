@@ -12,7 +12,7 @@ const styles = {
 const App = () => {
   return (
     <div>
-      <div style={{backgroundColor: 'transparent', height: '200vh', zIndex: 2, position: 'relative'}}></div>
+      <div style={{backgroundColor: 'pink', height: '200vh', zIndex: 0, position: 'relative'}}></div>
       <div style={styles.canvasHolder}>
         <ModelViewer />
       </div>

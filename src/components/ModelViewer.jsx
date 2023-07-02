@@ -142,7 +142,7 @@ is responsible for setting up the initial state of the 3D model viewer. */
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     renderer = new THREE.WebGLRenderer({ antialias: false, precision: 'lowp', alpha: false }); // Antialiasing off
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0xffffff); // Set background color to white
+    renderer.setClearColor(0xffffff, 0); // Set background color to white
 
     // Store scene, camera, and renderer references
     sceneRef.current = scene;
