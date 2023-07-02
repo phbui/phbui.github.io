@@ -43,8 +43,14 @@ const ModelViewer = React.memo(() => {
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
 
+  /* The line `const [defaultX, defaultY, defaultZ] = useMemo(() => [0, 0.7, 1.25], []);` is using the
+  `useMemo` hook to memoize the values `[0, 0.7, 1.25]`. */
   const [defaultX, defaultY, defaultZ] = useMemo(() => [0, 0.7, 1.25], []);
   
+  /* The `cameraPositionsAndRotations` constant is an array of camera settings. Each camera setting
+  consists of a position and rotation object. The position object specifies the x, y, and z
+  coordinates of the camera, while the rotation object specifies the rotation around the x, y, and z
+  axes. */
   const cameraPositionsAndRotations = useMemo(() => [
     { position: { x: defaultX, y: defaultY, z: defaultZ }, rotation: { x: 0, y: 0, z: 0 } },
     { position: { x: 1, y: 1, z: 0 }, rotation: { x: 0, y: 2, z: 0 } },
@@ -53,6 +59,10 @@ const ModelViewer = React.memo(() => {
   ], [defaultX, defaultY, defaultZ]);
 
   const numInterpolationSteps = 10; // Change this to modify the number of steps
+  /* The line `const interpolatedCameraPositionsAndRotations = useMemo(() =>
+  generateCameraSettings(cameraPositionsAndRotations, numInterpolationSteps),
+  [cameraPositionsAndRotations, numInterpolationSteps]);` is using the `useMemo` hook to memoize the
+  result of the `generateCameraSettings` function. */
   const interpolatedCameraPositionsAndRotations = useMemo(() => generateCameraSettings(cameraPositionsAndRotations, numInterpolationSteps), [cameraPositionsAndRotations, numInterpolationSteps]);
 
   const [currentCameraSettingIndex, setCameraSettingIndex] = useState(0);
@@ -84,17 +94,20 @@ library. */
     rendererRef.current.setSize(window.innerWidth, window.innerHeight);
   }, 200), []);
 
-/* The `handleScroll` function is a throttled callback function that is used to handle the scroll
-event. It is created using the `useCallback` hook and the `throttle` function from the lodash
-library. */
-  const handleScroll = useCallback(throttle((event) => {
-    const delta = Math.sign(event.deltaY);
-    let nextIndex = currentCameraSettingIndex + delta;
-  
+  /* The `handleScroll` function is a debounced callback function that is used to handle the window
+  scroll event. It is created using the `useCallback` hook and the `throttle` function from the lodash
+  library. */
+  const handleScroll = useCallback(throttle(() => {
+    // Get scroll position of the page
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Convert scroll position to an index in our camera array
+    let nextIndex = Math.floor(scrollPosition / (document.body.offsetHeight / interpolatedCameraPositionsAndRotations.length));
+    
     // Ensure index is within bounds of our array
     nextIndex = Math.max(0, nextIndex);
     nextIndex = Math.min(interpolatedCameraPositionsAndRotations.length - 1, nextIndex);
-  
+    
     if (nextIndex !== currentCameraSettingIndex) {
       const currentPosition = { x: cameraRef.current.position.x, y: cameraRef.current.position.y, z: cameraRef.current.position.z };
       const currentRotation = { x: cameraRef.current.rotation.x, y: cameraRef.current.rotation.y, z: cameraRef.current.rotation.z };
@@ -175,12 +188,12 @@ is responsible for setting up the initial state of the 3D model viewer. */
 component is mounted. The event listeners are added using the `window.addEventListener` method. */
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    window.addEventListener('wheel', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     // Clean up
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [handleResize, handleScroll]);
 
