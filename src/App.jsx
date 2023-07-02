@@ -2,6 +2,10 @@ import React from 'react';
 import ModelViewer from './components/ModelViewer';
 
 const styles = {
+  mainContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
   background: {
     width: '100%',
     height: '100vh',
@@ -22,7 +26,8 @@ const styles = {
     height: '100%',
     position: 'fixed',
     top: 0,
-    zIndex: 2
+    zIndex: 3,
+    pointerEvents: 'none',
   },
   topLeft: {
     position: 'absolute',
@@ -44,11 +49,21 @@ const styles = {
   verticalText: {
     writingMode: 'vertical-rl'
   },
+  textBox: {
+    margin: '300px 0 300px 0',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    border: '1px solid red',
+    color: 'white',
+    boxShadow: '0 0 5px rgb(254, 33, 70,0.25), 0 0 15px rgb(254, 33, 70, 0.5)',
+    padding: '25px',
+    height: ' 400vh',
+    zIndex: 2,
+  }
 }
 
 const App = () => {
   return (
-    <div>
+    <div style={styles.mainContainer}>
       <div style={styles.background}></div>
       <div style={styles.canvasHolder}>
         <ModelViewer />
@@ -60,12 +75,15 @@ const App = () => {
         <div style={styles.topLeft}>        
           <p style={styles.accentText}>+---|=============-</p>
         </div>
-        <div style={styles.bottomRight}>
+        <div style={{...styles.bottomRight, right: '62px'}}>
           <p style={{...styles.accentText, ...styles.verticalText}}>-=============|---+</p>
         </div>
         <div style={{...styles.bottomRight}}>
         <p style={styles.accentText}>-=============|---+</p>
         </div>
+      </div>
+      <div style={styles.textBox}>
+        <p>halsjdklasjlkjljfljs</p>
       </div>
     </div>
   );
