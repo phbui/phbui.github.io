@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Project from './components/Project';
 import ALink from './components/ALink';
+import resume from './assets/Philip Bui Resume.pdf';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -49,7 +50,7 @@ const App = () => {
       </div>
       <div ref={aboutRef} className='textBox' style={{marginLeft: '14vw'}}>
         <pre>{"const About = (phi_bui) => {"}</pre>
-        <pre>   {"const resume = fetch('"}<a href={'assets/Philip Bui Resume.pdf'} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
+        <pre>   {"const resume = fetch('"}<a href={resume} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
         <pre>   {"let undergrad = 'B.S. in CS @ WPI';"}</pre>
         <pre>   {"let grad = null; "}<span className='grad'>{"//TBD"}</span></pre>
         <br></br>

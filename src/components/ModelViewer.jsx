@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { debounce, throttle } from 'lodash';
 import TWEEN from '@tweenjs/tween.js';
+import gundam from './assets/gundam.stl';
 
 /**
  * The function generates interpolated camera settings based on a given array of settings and the
@@ -158,7 +159,7 @@ is responsible for setting up the initial state of the 3D model viewer. */
     It creates a new instance of the `STLLoader` and then calls its `load` method, passing in the file
     path of the STL model and a callback function. */
     const loader = new STLLoader();
-    fetch('src/assets/gundam.stl')
+    fetch(gundam)
       .then(response => response.arrayBuffer())
       .then(data => {
         const geometry = loader.parse(data);
@@ -170,7 +171,8 @@ is responsible for setting up the initial state of the 3D model viewer. */
         mesh.scale.set(0.01, 0.01, 0.01); // Lowered scale to make the model smaller.
     
         sceneRef.current.add(mesh);
-      });
+      })
+      .catch(error => console.error('Error loading STL file:', error));;
     
 
     // Set up camera position
