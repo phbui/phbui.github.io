@@ -92,22 +92,27 @@
   margin: 0 10px;
 }
 
-.textBox span {
+.textBox {
   color: rgb(120, 112, 126);
   text-shadow: 0 0 5px rgba(120, 112, 126, 0.25), 0 0 10px rgba(120, 112, 126, 0.5);
 }
 
 .links {
   text-decoration: none;
-  color: white;
+  color: red;
+  text-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
   position: relative;
 }
 
 .links:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
   text-decoration: underline;
 }
 
 .links:hover::after {
+  color: inherit;
   content: "<";
 }
 
@@ -117,6 +122,7 @@
   justify-content: center;
   align-items: center;
   width: 70vw;
+  height: fit-content;
   margin-bottom: 10vh;
 }
 
@@ -141,4 +147,12 @@
 .projectText a {
   display: inline;
   padding: 0;
+}
+
+.navBar * {
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }

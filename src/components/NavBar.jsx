@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import ALink from './ALink';
 
 const NavBar = ({ homeRef, projectsRef, aboutRef, contactRef }) => {
     const handleClick = useCallback((ref) => () => {
@@ -13,16 +14,16 @@ const NavBar = ({ homeRef, projectsRef, aboutRef, contactRef }) => {
   return (
     <div className="accentLine">
       <pre className="preText">
-        <a onClick={handleClick(homeRef)} className='links'>home</a>
+        <a onClick={handleClick(homeRef)} className='navBar'><ALink text='home'/></a>
       </pre>
       <pre className="preText">
-        <a onClick={handleClick(projectsRef)} className='links'>projects</a>
+        <a onClick={handleClick(projectsRef)} className='navBar'><ALink text='projects'/></a>
       </pre>
       <pre className="preText">
-        <a onClick={handleClick(aboutRef)} className='links'>about</a>
+        <a onClick={handleClick(aboutRef)} className='navBar'><ALink text='about'/></a>
       </pre>
       <pre className="preText">
-        <a onClick={handleClick(contactRef)} className='links'>contact</a>
+        <a onClick={handleClick(contactRef)} className='navBar'><ALink text='contact'/></a>
       </pre>
     </div>
   );
