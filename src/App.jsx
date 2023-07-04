@@ -47,7 +47,7 @@ const App = () => {
           <Project img="" title="BWH MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
         </div>
       </div>
-      <div ref={aboutRef} className='textBox' style={{marginLeft: '12.5vw'}}>
+      <div ref={aboutRef} className='textBox' style={{marginLeft: '14vw'}}>
         <pre>{"const About = (phi_bui) => {"}</pre>
         <pre>   {"const resume = fetch('"}<a href={'src/assets/Philip Bui Resume.pdf'} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
         <pre>   {"let undergrad = 'B.S. in CS @ WPI';"}</pre>
