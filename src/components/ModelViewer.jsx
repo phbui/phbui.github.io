@@ -161,7 +161,6 @@ is responsible for setting up the initial state of the 3D model viewer. */
 
     const gundamStlUrl = 'https://raw.githubusercontent.com/phbui/phbui.github.io/main/src/assets/gundam.stl';
 
-
     fetch(gundamStlUrl)
       .then(response => response.arrayBuffer())
       .then(data => {
