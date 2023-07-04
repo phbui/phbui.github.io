@@ -113,7 +113,7 @@ library. */
       const currentRotation = { x: cameraRef.current.rotation.x, y: cameraRef.current.rotation.y, z: cameraRef.current.rotation.z };
   
       new TWEEN.Tween(currentPosition)
-        .to(interpolatedCameraPositionsAndRotations[nextIndex].position, 2000)
+        .to(interpolatedCameraPositionsAndRotations[nextIndex].position, 1000)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(() => {
           cameraRef.current.position.set(currentPosition.x, currentPosition.y, currentPosition.z);
@@ -121,7 +121,7 @@ library. */
         .start();
   
       new TWEEN.Tween(currentRotation)
-        .to(interpolatedCameraPositionsAndRotations[nextIndex].rotation, 2000)
+        .to(interpolatedCameraPositionsAndRotations[nextIndex].rotation, 1000)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(() => {
           cameraRef.current.rotation.set(currentRotation.x, currentRotation.y, currentRotation.z);
