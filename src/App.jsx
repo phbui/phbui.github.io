@@ -49,7 +49,7 @@ const App = () => {
       </div>
       <div ref={aboutRef} className='textBox' style={{marginLeft: '14vw'}}>
         <pre>{"const About = (phi_bui) => {"}</pre>
-        <pre>   {"const resume = fetch('"}<a href={'src/assets/Philip Bui Resume.pdf'} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
+        <pre>   {"const resume = fetch('"}<a href={'assets/Philip Bui Resume.pdf'} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
         <pre>   {"let undergrad = 'B.S. in CS @ WPI';"}</pre>
         <pre>   {"let grad = null; "}<span className='grad'>{"//TBD"}</span></pre>
         <br></br>

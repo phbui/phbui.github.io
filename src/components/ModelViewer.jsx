@@ -158,16 +158,20 @@ is responsible for setting up the initial state of the 3D model viewer. */
     It creates a new instance of the `STLLoader` and then calls its `load` method, passing in the file
     path of the STL model and a callback function. */
     const loader = new STLLoader();
-    loader.load('src/assets/gundam.stl', (geometry) => {
-      const material = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, wireframe: true, wireframeLinewidth: 10});
-      const mesh = new THREE.Mesh(geometry, material);
-      mesh.frustumCulled = true;
-
-      mesh.rotation.x = -Math.PI / 2;
-      mesh.scale.set(0.01, 0.01, 0.01); // Lowered scale to make the model smaller.
-
-      scene.add(mesh);
-    });
+    fetch('src/assets/gundam.stl')
+      .then(response => response.arrayBuffer())
+      .then(data => {
+        const geometry = loader.parse(data);
+        const material = new THREE.MeshBasicMaterial({ color: 0xFFFFFF, wireframe: true, wireframeLinewidth: 10 });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.frustumCulled = true;
+    
+        mesh.rotation.x = -Math.PI / 2;
+        mesh.scale.set(0.01, 0.01, 0.01); // Lowered scale to make the model smaller.
+    
+        sceneRef.current.add(mesh);
+      });
+    
 
     // Set up camera position
     camera.position.x = defaultX;
