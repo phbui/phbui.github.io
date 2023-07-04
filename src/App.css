@@ -22,7 +22,7 @@
   top: 80px;
   left: 80px;
   width: 0;
-  height: 15vh;
+  height: 150px;
   border: 1.5px solid white;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
   z-index: 1;
@@ -149,12 +149,9 @@
   padding: 0;
 }
 
-.navBar {
-  z-index: 3;
-}
-
 .navBar * {
   color: white;
+  font-size: 30px;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
