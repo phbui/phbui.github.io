@@ -1,45 +1,54 @@
 {
   "hash": "2955ec8e",
-  "browserHash": "131f88bf",
+  "browserHash": "e7e7581f",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "498a4151",
+      "fileHash": "41f37e99",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "9293e1fb",
+      "fileHash": "1b1e550e",
       "needsInterop": true
     },
     "three": {
       "src": "../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "e467b17a",
+      "fileHash": "eff56cb3",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/STLLoader": {
       "src": "../../node_modules/three/examples/jsm/loaders/STLLoader.js",
       "file": "three_examples_jsm_loaders_STLLoader.js",
-      "fileHash": "74f9c35f",
+      "fileHash": "27d6f546",
       "needsInterop": false
     },
     "lodash": {
       "src": "../../node_modules/lodash/lodash.js",
       "file": "lodash.js",
-      "fileHash": "d6a3a30e",
+      "fileHash": "dcd156a5",
       "needsInterop": true
     },
     "@tweenjs/tween.js": {
       "src": "../../node_modules/@tweenjs/tween.js/dist/tween.esm.js",
       "file": "@tweenjs_tween__js.js",
-      "fileHash": "34d18cd0",
+      "fileHash": "0fcc65eb",
       "needsInterop": false
+    },
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "6fad883f",
+      "needsInterop": true
     }
   },
   "chunks": {
+    "chunk-LJ7E63WA": {
+      "file": "chunk-LJ7E63WA.js"
+    },
     "chunk-BHRT4LQR": {
       "file": "chunk-BHRT4LQR.js"
     },
