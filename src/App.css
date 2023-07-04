@@ -11,7 +11,7 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  background-image: url('src/assets/background.jpg');
+  background-image: url('assets/background.jpg');
   background-size: contain;
   background-position: center;
   z-index: 0;
