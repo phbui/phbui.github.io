@@ -33,7 +33,7 @@ const App = () => {
         <p className='accentText'>-=============|---+</p>
         </div>
       </div>
-      <div ref={homeRef} className='textBox' style={{marginRight: '25vw'}}>
+      <div ref={homeRef} className='textBox' style={{margin: '0 25vw 0 0'}}>
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
         <pre>{"I make websites for cool people."}</pre>
       </div>
@@ -48,7 +48,7 @@ const App = () => {
           <Project img="" title="BWH MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
         </div>
       </div>
-      <div ref={aboutRef} className='textBox' style={{marginLeft: '14vw'}}>
+      <div ref={aboutRef} className='textBox'>
         <pre>{"const About = (phi_bui) => {"}</pre>
         <pre>   {"const resume = fetch('"}<a href={resume} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
         <pre>   {"let undergrad = 'B.S. in CS @ WPI';"}</pre>
