@@ -17,10 +17,21 @@
   z-index: 0;
 }
 
+.accentLine {
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  width: 0;
+  height: 15vh;
+  border: 1.5px solid white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
 .canvasHolder {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .accentHolder {
@@ -47,7 +58,7 @@
 .accentText {
   margin: 0;
   font-family: 'Courier New', monospace;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
@@ -60,18 +71,24 @@
 .textBox {
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid red;
-  color: white;
   box-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
   padding: 25px;
   width: 35vw;
   z-index: 2;
-  font-size: 1.25vw;
-  user-select: none;
-  margin-bottom: 150px;
+  margin-bottom: 125px;
 }
 
-.textBox pre {
+.textBox pre, .preText {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+    user-select: none;
+  font-size: 1.25vw;
+  color: white;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.preText {
+  margin: 0 10px;
 }
 
 .textBox span {
