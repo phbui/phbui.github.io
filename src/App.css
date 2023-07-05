@@ -72,7 +72,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   border: 1px solid red;
   box-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
-  padding: 25px;
+  padding: 1.5vw;
   width: fit-content;
   z-index: 2;
   margin-bottom: 10vh;
@@ -82,7 +82,7 @@
   font-family: 'Courier New', monospace;
   font-weight: bold;
     user-select: none;
-  font-size: 1.25vw;
+  font-size: 1.5vw;
   color: white;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
   height: fit-content;
@@ -90,11 +90,6 @@
 
 .preText {
   margin: 0 10px;
-}
-
-.textBox {
-  color: rgb(120, 112, 126);
-  text-shadow: 0 0 5px rgba(120, 112, 126, 0.25), 0 0 10px rgba(120, 112, 126, 0.5);
 }
 
 .links {
@@ -179,10 +174,29 @@ a {
 
   .projects {
     width: 90vw;
+    flex-direction: column;
+  }
+
+  .projects .textBox{
+    margin: 25px 0 25px 0 !important;
   }
 
   .projectItem {
-    max-width: 20vw;
+    display: flex;
+    max-width: 75vw;
+    max-height: 12vh;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .projectIMG {
+    height: 100px;
+    max-width: 100px;
+    margin: 0;
+  }
+
+  .projectTextHolder {
+    padding: 10px;
   }
 
   * {
