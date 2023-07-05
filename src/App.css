@@ -176,4 +176,16 @@ a {
   .textBox {
     padding: 8px;
   }
+
+  .projects {
+    width: 90vw;
+  }
+
+  .projectItem {
+    max-width: 20vw;
+  }
+
+  * {
+    font-size: 10px !important;
+  }
 }

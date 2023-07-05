@@ -39,13 +39,13 @@ const App = () => {
       </div>
       <div ref={projectsRef} className='projects'>
         <div className="textBox" style={{ margin: '15vh 0 0 0'}}>
-          <Project img="" title="Amazon Pathfinder" link="" text="Created an intern tool projected to achieve a 95% cost reduction, saving Amazon over $10k per Amazonian trained in drop zones."/>
+          <Project img="" title="Pathfinder" link="" text="Created an intern tool projected to achieve a 95% cost reduction, saving Amazon over $10k per Amazonian trained in drop zones."/>
         </div>
         <div className="textBox" style={{ margin: '5vh 2.5vw 0 2.5vw'}}>
-          <Project img="" title="BGC NitroCycle" link="https://github.com/IQP-NCPOGD/nitrocycle" text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."/>
+          <Project img="" title="NitroCycle" link="https://github.com/IQP-NCPOGD/nitrocycle" text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."/>
         </div>
         <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
-          <Project img="" title="BWH MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
+          <Project img="" title="MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
         </div>
       </div>
       <div ref={aboutRef} className='textBox'>
