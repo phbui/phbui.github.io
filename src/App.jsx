@@ -5,6 +5,9 @@ import NavBar from './components/NavBar';
 import Project from './components/Project';
 import ALink from './components/ALink';
 import resume from './assets/Philip Bui Resume.pdf';
+import pfIMG from './assets/background.jpg';
+import ncIMG from './assets/background.jpg';
+import msrsIMG from './assets/background.jpg';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -26,26 +29,26 @@ const App = () => {
         <div className='topLeft'>        
           <p className='accentText'>+---|=============-</p>
         </div>
-        <div className='bottomRight' style={{right: '50px'}}>
+        <div className='bottomRight rightSword'>
           <p className='accentText verticalText'>-=============|---+</p>
         </div>
         <div className='bottomRight'>
         <p className='accentText'>-=============|---+</p>
         </div>
       </div>
-      <div ref={homeRef} className='textBox' style={{margin: '0 25vw 0 0'}}>
+      <div ref={homeRef} className='textBox' style={{margin: '0 25vw -25vh 0'}}>
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
         <pre>{"I make websites for cool people."}</pre>
       </div>
       <div ref={projectsRef} className='projects'>
-        <div className="textBox" style={{ margin: '15vh 0 0 0'}}>
-          <Project img="src\assets\background.jpg" title="Pathfinder" link="" text="Created an intern tool projected to achieve a 95% cost reduction, saving Amazon over $10k per Amazonian trained in drop zones."/>
+        <div className="textBox" style={{ margin: '50vh 0 0 0'}}>
+          <Project img={pfIMG} title="Pathfinder" link="" text="Created an intern tool projected to achieve a 95% cost reduction, saving Amazon over $10k per Amazonian trained in drop zones."/>
         </div>
-        <div className="textBox centeredBox" style={{ margin: '5vh 2.5vw 0 2.5vw'}}>
-          <Project img="src\assets\background.jpg" title="NitroCycle" link="https://github.com/IQP-NCPOGD/nitrocycle" text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."/>
+        <div className="textBox" style={{ margin: '25vh 2.5vw 0 2.5vw'}}>
+          <Project img={ncIMG} title="NitroCycle" link="https://github.com/IQP-NCPOGD/nitrocycle" text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."/>
         </div>
         <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
-          <Project img="src\assets\background.jpg" title="MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
+          <Project img={msrsIMG} title="MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
         </div>
       </div>
       <div ref={aboutRef} className='textBox'>
