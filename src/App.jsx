@@ -5,9 +5,10 @@ import NavBar from './components/NavBar';
 import Project from './components/Project';
 import ALink from './components/ALink';
 import resume from './assets/Philip Bui Resume.pdf';
-import pfIMG from './assets/background.jpg';
-import ncIMG from './assets/background.jpg';
-import msrsIMG from './assets/background.jpg';
+import hu3900 from './assets/HU3900 - ChatGPT, How Do I Design.pdf'
+import huIMG from './assets/chatgpt.jpg';
+import ncIMG from './assets/wpi.jpg';
+import msrsIMG from './assets/mgbwh.jpg';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -41,14 +42,15 @@ const App = () => {
         <pre>{"I make websites for cool people."}</pre>
       </div>
       <div ref={projectsRef} className='projects'>
+
         <div className="textBox" style={{ margin: '50vh 0 0 0'}}>
-          <Project img={pfIMG} title="Pathfinder" link="" text="Created an intern tool projected to achieve a 95% cost reduction, saving Amazon over $10k per Amazonian trained in drop zones."/>
-        </div>
-        <div className="textBox" style={{ margin: '25vh 2.5vw 0 2.5vw'}}>
           <Project img={ncIMG} title="NitroCycle" link="https://github.com/IQP-NCPOGD/nitrocycle" text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."/>
         </div>
+        <div className="textBox" style={{ margin: '25vh 2.5vw 0 2.5vw'}}>
+          <Project img={msrsIMG} title="MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system (MSRS) made for Mass General Brigham and Women's Hospital for WPI's Software Engineering course."/>
+        </div>
         <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
-          <Project img={msrsIMG} title="MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system made for Brigham and Women's Hospital for WPI's Software Engineering course."/>
+          <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for a balanced human-AI co-creation in creative processes, acknowledging benefits, challenges, and ethical implications."/>
         </div>
       </div>
       <div ref={aboutRef} className='textBox'>

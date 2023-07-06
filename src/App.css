@@ -122,8 +122,9 @@
 }
 
 .projectIMG {
-  border: none;
   margin: 0 0 10px 0;
+  border: 1px solid red;
+  box-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
 }
 
 .projectItem {
@@ -205,6 +206,7 @@ a {
   }
 
   .projectTextHolder {
+    padding-top: 10px;
     padding-left: 10px;
   }
 
