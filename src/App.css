@@ -22,7 +22,7 @@
   top: 80px;
   left: 80px;
   width: 0;
-  height: 12vw;
+  height: calc(5vw + 6vh + .5vmin);
   border: 1.5px solid white;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
   z-index: 1;
@@ -82,7 +82,7 @@
   font-family: 'Courier New', monospace;
   font-weight: bold;
     user-select: none;
-  font-size: 1.5vw;
+  font-size: calc(0.75vw + 0.5vh + .25vmin);
   color: white;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
   height: fit-content;
@@ -141,7 +141,7 @@
 }
 
 .projectTextHolder {
-  padding-left: 5px;
+  padding: 5px 0 0 0;
 }
 
 .projectText a {
@@ -151,7 +151,7 @@
 
 .navBar * {
   color: white;
-  font-size: 2.25vw;
+  font-size: calc(1vw + 1vh + .25vmin);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
