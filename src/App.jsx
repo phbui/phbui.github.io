@@ -37,9 +37,12 @@ const App = () => {
         <p className='accentText'>-=============|---+</p>
         </div>
       </div>
-      <div ref={homeRef} className='textBox' style={{margin: '0 25vw -25vh 0'}}>
+      <div ref={homeRef} className='textBox' style={{margin: '0 25vw 10vh 0'}}>
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
         <pre>{"I make websites for cool people."}</pre>
+      </div>
+      <div ref={homeRef} className='textBox' style={{margin: '0 15vw -25vh 0'}}>
+        <pre>{"Check out some of my work:"}</pre>
       </div>
       <div ref={projectsRef} className='projects'>
 
