@@ -52,7 +52,7 @@ const App = () => {
           <Project img={msrsIMG} title="MSRS" link="https://github.com/phbui/BWH-Medical-Service-Request-System" text="A medical service request system (MSRS) made for Mass General Brigham and Women's Hospital for WPI's Software Engineering course."/>
         </div>
         <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
-          <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for a balanced human-AI co-creation in creative processes, acknowledging benefits, challenges, and ethical implications."/>
+          <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethical implications."/>
         </div>
       </div>
       <div ref={aboutRef} className='textBox' style={{margin: '0 -15vw 10vh 0'}}>
