@@ -6,7 +6,7 @@ const NavBar = ({ homeRef, projectsRef, aboutRef, contactRef }) => {
         const { current: element } = ref;
       
         window.scrollTo({
-          top: element.offsetTop - window.innerHeight / 2 + element.offsetHeight / 2,
+          top: element.offsetTop - window.innerHeight / 2 + element.offsetHeight * 3,
           behavior: 'smooth',
         });
       }, []);

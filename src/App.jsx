@@ -41,10 +41,10 @@ const App = () => {
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
         <pre>{"I make websites for cool people."}</pre>
       </div>
-      <div ref={homeRef} className='textBox' style={{margin: '0 15vw -25vh 0'}}>
+      <div ref={projectsRef} className='textBox' style={{margin: '0 15vw -25vh 0'}}>
         <pre>{"Check out some of my work:"}</pre>
       </div>
-      <div ref={projectsRef} className='projects'>
+      <div className='projects'>
         <div className="textBox" style={{ margin: '50vh 0 0 0'}}>
           <Project img={ncIMG} title="NitroCycle" link="https://github.com/IQP-NCPOGD/nitrocycle" text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."/>
         </div>
@@ -55,10 +55,10 @@ const App = () => {
           <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for a balanced human-AI co-creation in creative processes, acknowledging benefits, challenges, and ethical implications."/>
         </div>
       </div>
-      <div ref={homeRef} className='textBox' style={{margin: '0 -15vw 10vh 0'}}>
+      <div ref={aboutRef} className='textBox' style={{margin: '0 -15vw 10vh 0'}}>
         <pre>{"Some stuff about me:"}</pre>
       </div>
-      <div ref={aboutRef} className='textBox'style={{margin: '0 -10vw 10vh 0'}}>
+      <div className='textBox'style={{margin: '0 -10vw 10vh 0'}}>
         <pre>{"const About = (phi_bui) => {"}</pre>
         <pre>   {"const resume = fetch('"}<a href={resume} download="Philip Bui - Resume.pdf"><ALink text="resume.pdf"/></a>{"');"}</pre>
         <pre>   {"let undergrad = 'B.S. in CS @ WPI';"}</pre>
@@ -72,10 +72,10 @@ const App = () => {
         <pre>   {"};"}</pre>
         <pre>{"}"}</pre>
       </div>
-      <div ref={homeRef} className='textBox' style={{margin: '0 30vw 10vh 0'}}>
+      <div ref={contactRef}  className='textBox' style={{margin: '0 30vw 10vh 0'}}>
         <pre>{"Get in contact with me:"}</pre>
       </div>
-      <div ref={contactRef} className='textBox'>
+      <div className='textBox'>
         <pre>{"const Contact = {"}              </pre>
         <pre>  {"{email: "}<a href="mailto:bilphui@gmail.com"><ALink text="bilphui@gmail.com"/></a>{"},"}</pre>
         <pre>  {"{linkedin: "}<a href="https://www.linkedin.com/in/phi-bui/"><ALink text="phi-bui"/></a>{"},"}</pre>
