@@ -60,7 +60,7 @@ const App = () => {
       </div>
       <div className='projects' style={{ margin: '0 0 10vh 0'}}>
       <div className="textBox" style={{ margin: '10vh 0 0 0'}}>
-          <Project img={hamiIMG} title="Metamorphosis" link="https://memoirspathos.art/" text="A website I made for the talented Hami Trinh."/>
+          <Project img={hamiIMG} title="Memoirs-Pathos" link="https://memoirspathos.art/" text="A website I made for the talented Hami Trinh's metamorphosis."/>
         </div>
       <div className="textBox" style={{ margin: '-15vh 2.5vw 0 2.5vw'}}>
           <Project img={wpiplIMG} title="WPIPL" link="https://wpi-powerlifting.github.io/" text="A website I made for WPI's Powerlifting Club."/>
