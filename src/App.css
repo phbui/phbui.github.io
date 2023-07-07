@@ -97,7 +97,7 @@
   color: red;
   text-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
   position: relative;
-  transition: text-shadow 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
 }
 
 .links:hover {
