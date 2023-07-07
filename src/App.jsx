@@ -9,6 +9,7 @@ import hu3900 from './assets/HU3900 - ChatGPT, How Do I Design.pdf'
 import huIMG from './assets/chatgpt.jpg';
 import ncIMG from './assets/wpi.jpg';
 import msrsIMG from './assets/mgbwh.jpg';
+import meIMG from './assets/main-era.jpg';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -53,6 +54,11 @@ const App = () => {
         </div>
         <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
           <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethical implications."/>
+        </div>
+      </div>
+      <div className='projects'>
+      <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
+          <Project img={meIMG} title="Main Era" link="https://main-era.github.io/" text="A website I made for a Boston-based, indie punk band."/>
         </div>
       </div>
       <div ref={aboutRef} className='textBox' style={{margin: '0 -15vw 10vh 0'}}>
