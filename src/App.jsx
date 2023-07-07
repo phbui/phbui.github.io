@@ -56,7 +56,7 @@ const App = () => {
           <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethical implications."/>
         </div>
       </div>
-      <div className='projects'>
+      <div className='projects' style={{ margin: '0 0 10vh 0'}}>
       <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
           <Project img={meIMG} title="Main Era" link="https://main-era.github.io/" text="A website I made for a Boston-based, indie punk band."/>
         </div>
