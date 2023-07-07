@@ -10,6 +10,7 @@ import huIMG from './assets/chatgpt.jpg';
 import ncIMG from './assets/wpi.jpg';
 import msrsIMG from './assets/mgbwh.jpg';
 import meIMG from './assets/main-era.jpg';
+import wpiplIMG from './assets/wpipl.jpg';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -57,6 +58,9 @@ const App = () => {
         </div>
       </div>
       <div className='projects' style={{ margin: '0 0 10vh 0'}}>
+      <div className="textBox" style={{ margin: '25vh 2.5vw 0 2.5vw'}}>
+          <Project img={wpiplIMG} title="WPIPL" link="https://wpi-powerlifting.github.io/" text="A website I made for WPI's Powerlifting Club."/>
+        </div>
       <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
           <Project img={meIMG} title="Main Era" link="https://main-era.github.io/" text="A website I made for a Boston-based, indie punk band."/>
         </div>
