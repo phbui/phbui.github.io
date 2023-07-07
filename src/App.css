@@ -97,12 +97,13 @@
   color: red;
   text-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
   position: relative;
+  transition: text-shadow 0.1s ease-in-out;
 }
 
 .links:hover {
   cursor: pointer;
   color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.75);
   text-decoration: underline;
 }
 
@@ -121,9 +122,17 @@
 }
 
 .projectIMG {
+  box-sizing: border-box;
+  max-width: 15vw;
   margin: 0 0 10px 0;
   border: 1px solid red;
   box-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
+  transition: border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.projectIMG:hover {
+  border: 2px solid red;
+  box-shadow: 0 0 5px rgba(254, 33, 70, 0.5), 0 0 15px rgba(254, 33, 70, 0.75);
 }
 
 .projectItem {
@@ -155,7 +164,8 @@
 }
 
 a {
-  text-decoration: none;
+  font-weight: bold;
+  color: red;
 }
 
 .grad {
