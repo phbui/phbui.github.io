@@ -12,6 +12,7 @@ import msrsIMG from './assets/mgbwh.jpg';
 import meIMG from './assets/main-era.jpg';
 import wpiplIMG from './assets/wpipl.jpg';
 import hamiIMG from './assets/hami.jpg';
+import tarotIMG from './assets/tarot.jpg';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -58,7 +59,7 @@ const App = () => {
           <Project img={huIMG} title="HUA Paper" link={hu3900} download="Philip Bui - ChatGPT, How Do I Design?" text="'ChatGPT, How do I Design?' advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethical implications."/>
         </div>
       </div>
-      <div className='projects' style={{ margin: '0 0 10vh 0'}}>
+      <div className='projects'>
       <div className="textBox" style={{ margin: '10vh 0 0 0'}}>
           <Project img={hamiIMG} title="Memoirs-Pathos" link="https://memoirspathos.art/" text="A website I made for the talented Hami Trinh's metamorphosis."/>
         </div>
@@ -68,6 +69,12 @@ const App = () => {
       <div className="textBox" style={{ margin: '-40vh 0 0 0'}}>
           <Project img={meIMG} title="Main Era" link="https://main-era.github.io/" text="A website I made for a Boston-based, indie punk band."/>
         </div>
+      </div>
+      <div className='projects' style={{ margin: '0 0 10vh 0'}}>
+      <div className="textBox" style={{ margin: '0vh 0 0 0'}}>
+          <Project img={tarotIMG} title="Tarot Card Reader" link="https://objectivephi.github.io/" text="A little tarot card reader I made on my downtime at work."/>
+        </div>
+
       </div>
       <div ref={aboutRef} className='textBox' style={{margin: '0 -15vw 10vh 0'}}>
         <pre>{"Some stuff about me:"}</pre>
