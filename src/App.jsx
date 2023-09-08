@@ -88,7 +88,7 @@ const App = () => {
         <pre>   {"const experience = () => {"}</pre>
         <pre>       {"return ["}</pre>
         <pre>           {"{Amazon: 'Area Manager Intern'},"}</pre>
-        <pre>           {"{ProsperOn: 'Website Developer Intern'}"}</pre>
+        <pre>           {"{ProsperOn: 'Website Developer'}"}</pre>
         <pre>       {"];"}</pre>
         <pre>   {"};"}</pre>
         <pre>{"}"}</pre>
