@@ -188,6 +188,13 @@ const App = () => {
           <a href="https://github.com/phbui">
             <ALink text="phbui" />
           </a>
+          {"},"}
+        </pre>
+        <pre>
+          {"  {instagram: "}
+          <a href="https://www.instagram.com/objectivephi/">
+            <ALink text="@objectivephi" />
+          </a>
           {"}"}
         </pre>
         <pre>{"}"}</pre>
