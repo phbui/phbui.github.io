@@ -155,7 +155,7 @@ const App = () => {
         <pre> {"    return ["}</pre>
         <pre> {"      {Amazon: 'Operations Intern'},"}</pre>
         <pre> {"      {ProsperOn: 'Website Developer'},"}</pre>
-        <pre> {"      {enLabel: 'Full-Stack Software Engineer'},"}</pre>
+        <pre> {"      {enLabel: 'Full-Stack Software Engineer'}"}</pre>
         <pre> {"    ];"}</pre>
         <pre> {"  };"}</pre>
         <pre>{"}"}</pre>
