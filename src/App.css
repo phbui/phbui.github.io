@@ -11,7 +11,7 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  background-image: url('assets/background.jpg');
+  background-image: url("assets/background.jpg");
   background-size: contain;
   background-position: center;
   z-index: 0;
@@ -22,9 +22,10 @@
   top: 80px;
   left: 80px;
   width: 0;
-  height: calc(5vw + 6vh + .5vmin);
+  height: calc(5vw + 6vh + 0.5vmin);
   border: 1.5px solid white;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.25),
+    0 0 10px rgba(255, 255, 255, 0.5);
   z-index: 1;
 }
 
@@ -57,11 +58,12 @@
 
 .accentText {
   margin: 0;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 20px;
   font-weight: bold;
   color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25),
+    0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .verticalText {
@@ -78,13 +80,15 @@
   margin-bottom: 10vh;
 }
 
-.textBox pre, .preText {
-  font-family: 'Courier New', monospace;
+.textBox pre,
+.preText {
+  font-family: "Courier New", monospace;
   font-weight: bold;
-    user-select: none;
-  font-size: calc(0.75vw + 0.5vh + .25vmin);
+  user-select: none;
+  font-size: calc(0.75vw + 0.5vh + 0.25vmin);
   color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25),
+    0 0 10px rgba(255, 255, 255, 0.5);
   height: fit-content;
 }
 
@@ -103,7 +107,8 @@
 .links:hover {
   cursor: pointer;
   color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.75);
   text-decoration: underline;
 }
 
@@ -159,8 +164,9 @@
 
 .navBar * {
   color: white;
-  font-size: calc(1vw + 1vh + .25vmin);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.5);
+  font-size: calc(1vw + 1vh + 0.25vmin);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25),
+    0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 a {
@@ -170,11 +176,8 @@ a {
 
 .grad {
   color: rgb(120, 112, 126);
-  text-shadow: 0 0 5px rgba(120, 112, 126, 0.25), 0 0 10px rgba(120, 112, 126, 0.5);
-}
-
-.rightSword {
-  right: 50px;
+  text-shadow: 0 0 5px rgba(120, 112, 126, 0.25),
+    0 0 10px rgba(120, 112, 126, 0.5);
 }
 
 @media (max-width: 480px) {
@@ -196,7 +199,7 @@ a {
     flex-direction: column;
   }
 
-  .projects .textBox{
+  .projects .textBox {
     margin: 25px 0 25px 0 !important;
   }
 
