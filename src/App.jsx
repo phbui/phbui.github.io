@@ -94,7 +94,7 @@ const App = () => {
             img={untitledIMG}
             title="Untitled Boston"
             link="https://untitled.boston/"
-            text="A website I made for my start-up, Untitled Boston."
+            text="A website I made for my start-up entertainment consultancy, Untitled Boston."
           />
         </div>
         <div className="textBox" style={{ margin: "-15vh 2.5vw 0 2.5vw" }}>
@@ -120,10 +120,10 @@ const App = () => {
             img={ncIMG}
             title="Willow"
             link="https://www.are.na/block/26865313"
-            text="A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester."
+            text="A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's MQP Program."
           />
         </div>
-        <div className="textBox" style={{ margin: "-15vh 0 0 2.5vw" }}>
+        <div className="textBox" style={{ margin: "-25vh 0 0 2.5vw" }}>
           <Project
             img={tuftsIMG}
             title="Haven"
