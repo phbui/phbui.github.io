@@ -36,7 +36,13 @@ const ALink = ({ text }) => {
   }, [text, letters]);
 
   return (
-    <span className="links" ref={linkRef}>
+    <span
+      className="links"
+      ref={linkRef}
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
+    >
       {text}
     </span>
   );

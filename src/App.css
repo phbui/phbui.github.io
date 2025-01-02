@@ -129,7 +129,8 @@
 .projectIMG {
   box-sizing: border-box;
   max-width: 15vw;
-  margin: 0 0 10px 0;
+  max-height: 85%;
+  margin: 10px 0;
   border: 1px solid red;
   box-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
   transition: border 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
@@ -141,9 +142,12 @@
 }
 
 .projectItem {
-  max-width: 15vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  height: 100%;
+  width: 85%;
 }
 
 .projectText {
@@ -180,7 +184,152 @@ a {
     0 0 10px rgba(120, 112, 126, 0.5);
 }
 
+/* General container styles */
+.projects-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30vh;
+  height: 30vh;
+  z-index: 2;
+  width: 70vw;
+  justify-content: center;
+}
+
+.projects-container pre {
+  color: white;
+  margin-top: 1vh;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: calc(1vw + 1vh + 0.5vmin);
+}
+
+.section .links {
+  font-size: calc(1vw + 0.5vh + 0.5vmin);
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid red;
+  box-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
+  text-align: center;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.section:hover {
+  box-shadow: 0 0 10px rgba(254, 33, 70, 0.85), 0 0 20px rgba(254, 33, 70, 1);
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 1rem;
+  border-top: 1px solid red;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item.active {
+  display: flex;
+}
+
+.carousel-button {
+  position: absolute;
+  bottom: 5%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5%;
+}
+
+.carousel-button:hover {
+  color: red;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 10%;
+  width: 100%;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: red;
+}
+
 @media (max-width: 480px) {
+  .projects-container {
+    margin-top: 0;
+  }
+
+  .carousel-indicators {
+    bottom: 0%;
+  }
+
+  .carousel-button {
+    bottom: 0%;
+  }
+
+  .projectItem {
+    padding: 0;
+    margin-top: 10px;
+    width: 95%;
+    gap: 5px;
+  }
+
+  .preText.projectText {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .projectTextHolder {
+    padding: 0;
+  }
+
   .accentLine {
     display: none;
   }
@@ -203,23 +352,10 @@ a {
     margin: 25px 0 25px 0 !important;
   }
 
-  .projectItem {
-    display: flex;
-    max-width: 75vw;
-    max-height: 14vh;
-    flex-direction: row;
-    align-items: center;
-  }
-
   .projectIMG {
     height: 100px;
     max-width: 100px;
     margin: 0;
-  }
-
-  .projectTextHolder {
-    padding-top: 10px;
-    padding-left: 10px;
   }
 
   .rightSword {

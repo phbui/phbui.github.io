@@ -2,17 +2,9 @@ import React, { useRef } from "react";
 import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
-import Project from "./components/Project";
 import ALink from "./components/ALink";
 import resume from "./assets/Philip Bui Resume.pdf";
-import hu3900 from "./assets/HU3900 - ChatGPT, How Do I Design.pdf";
-import huIMG from "./assets/chatgpt.jpg";
-import ncIMG from "./assets/wpi.jpg";
-import msrsIMG from "./assets/mgbwh.jpg";
-import meIMG from "./assets/main-era.jpg";
-import untitledIMG from "./assets/untitled.jpg";
-import tarotIMG from "./assets/tarot.jpg";
-import tuftsIMG from "./assets/tufts.jpg";
+import ProjectCarousel from "./components/ProjectCarousel";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -52,7 +44,8 @@ const App = () => {
         style={{ margin: "0 25vw 10vh 0" }}
       >
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
-        <pre>{"I make websites for cool people."}</pre>
+        <pre>{"I am interested in the intersection"}</pre>
+        <pre>{"between humans and technology."}</pre>
       </div>
       <div
         ref={projectsRef}
@@ -61,77 +54,7 @@ const App = () => {
       >
         <pre>{"Check out some of my work:"}</pre>
       </div>
-      <div className="projects">
-        <div className="textBox" style={{ margin: "50vh 0 0 0" }}>
-          <Project
-            img={ncIMG}
-            title="NitroCycle"
-            link="https://github.com/IQP-NCPOGD/nitrocycle"
-            text="An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program."
-          />
-        </div>
-        <div className="textBox" style={{ margin: "25vh 2.5vw 0 2.5vw" }}>
-          <Project
-            img={msrsIMG}
-            title="MSRS"
-            link="https://github.com/phbui/BWH-Medical-Service-Request-System"
-            text="A medical service request system (MSRS) made for Mass General Brigham and Women's Hospital for WPI's Software Engineering course."
-          />
-        </div>
-        <div className="textBox" style={{ margin: "0vh 0 0 0" }}>
-          <Project
-            img={huIMG}
-            title="HUA Paper"
-            link={hu3900}
-            download="Philip Bui - ChatGPT, How Do I Design?"
-            text="'ChatGPT, How do I Design?' advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethical implications."
-          />
-        </div>
-      </div>
-      <div className="projects">
-        <div className="textBox" style={{ margin: "10vh 0 0 0" }}>
-          <Project
-            img={untitledIMG}
-            title="Untitled Boston"
-            link="https://untitled.boston/"
-            text="A website I made for my start-up entertainment consultancy, Untitled Boston."
-          />
-        </div>
-        <div className="textBox" style={{ margin: "-15vh 2.5vw 0 2.5vw" }}>
-          <Project
-            img={tarotIMG}
-            title="Tarot Cards"
-            link="https://objectivephi.github.io/"
-            text="A little tarot card reader I made on my downtime at work."
-          />
-        </div>
-        <div className="textBox" style={{ margin: "-40vh 0 0 0" }}>
-          <Project
-            img={meIMG}
-            title="Main Era"
-            link="https://main-era.github.io/"
-            text="A website I made for a Boston-based, indie punk band."
-          />
-        </div>
-      </div>
-      <div className="projects">
-        <div className="textBox" style={{ margin: "10vh 0 0 0" }}>
-          <Project
-            img={ncIMG}
-            title="Willow"
-            link="https://www.are.na/block/26865313"
-            text="A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's MQP Program."
-          />
-        </div>
-        <div className="textBox" style={{ margin: "-25vh 0 0 2.5vw" }}>
-          <Project
-            img={tuftsIMG}
-            title="Haven"
-            link="https://www.are.na/block/26865372"
-            text="A live map for anonymous incident reporting and resource location designed for Tuft's Producthon."
-          />
-        </div>
-      </div>
+      <ProjectCarousel />
       <div
         ref={aboutRef}
         className="textBox"
@@ -139,7 +62,7 @@ const App = () => {
       >
         <pre>{"Some stuff about me:"}</pre>
       </div>
-      <div className="textBox" style={{ margin: "0 -10vw 10vh 0" }}>
+      <div className="textBox" style={{ margin: "0 -12.5vw 10vh 0" }}>
         <pre>{"const About = (phi_bui) => {"}</pre>
         <pre>
           {"  const resume = fetch('"}
@@ -151,11 +74,30 @@ const App = () => {
         <pre>{"  let undergrad = 'B.S. in CS @ WPI';"}</pre>
         <pre>{"  let grad = 'M.S. in HRI @ Tufts';"}</pre>
         <br></br>
-        <pre> {"  const experience = () => {"}</pre>
+        <pre>
+          {" "}
+          {"  const "}
+          <span style={{ textDecoration: "underline" }}>
+            {"industry_experience"}
+          </span>
+          {" = () => {"}
+        </pre>
         <pre> {"    return ["}</pre>
         <pre> {"      {Amazon: 'Operations Intern'},"}</pre>
         <pre> {"      {ProsperOn: 'Website Developer'},"}</pre>
         <pre> {"      {enLabel: 'Full-Stack Software Engineer'}"}</pre>
+        <pre> {"    ];"}</pre>
+        <br></br>
+        <pre>
+          {" "}
+          {"  const "}
+          <span style={{ textDecoration: "underline" }}>
+            {"research_experience"}
+          </span>
+          {" = () => {"}
+        </pre>
+        <pre> {"    return ["}</pre>
+        <pre> {"      {Tufts: 'Human Interaction Lab'},"}</pre>
         <pre> {"    ];"}</pre>
         <pre> {"  };"}</pre>
         <pre>{"}"}</pre>
@@ -163,12 +105,12 @@ const App = () => {
       <div
         ref={contactRef}
         className="textBox"
-        style={{ margin: "0 30vw 10vh 0" }}
+        style={{ margin: "0 32.5vw 10vh 0" }}
       >
         <pre>{"Get in contact with me:"}</pre>
       </div>
       <div className="textBox">
-        <pre>{"const Contact = {"} </pre>
+        <pre>{"const Contact = {            "} </pre>
         <pre>
           {"  {email: "}
           <a href="mailto:bilphui@gmail.com">
