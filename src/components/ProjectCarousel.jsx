@@ -24,7 +24,7 @@ const academicProjects = [
   },
   {
     img: tuftsIMG,
-    title: "Robot System Study",
+    title: "Robot Controls Study",
     link: "https://www.are.na/block/33345530",
     text: "Explored human preferences in manual vs autonomous control of Sphero robots, emphasizing trust and adaptability in navigation systems.",
   },
@@ -42,18 +42,18 @@ const academicProjects = [
   },
   {
     img: msrsIMG,
-    title: "Brigham and Women's MSRS",
+    title: "BWH MSRS",
     link: "https://github.com/phbui/BWH-Medical-Service-Request-System",
-    text: "A medical service request system (MSRS) made for Mass General Brigham and Women's Hospital for WPI's Software Engineering course.",
+    text: "A medical service request system (MSRS) made for Brigham and Women's Hospital (BWH) during WPI's Software Engineering course.",
   },
 ];
 
 const miscellaneousProjects = [
   {
     img: untitledIMG,
-    title: "Untitled Boston",
+    title: "Untitled",
     link: "https://untitled.boston/",
-    text: "A website I made for my start-up entertainment consultancy, Untitled Boston.",
+    text: "A website I made for a start-up entertainment consultancy, Untitled LLC in Boston, MA.",
   },
   {
     img: tarotIMG,

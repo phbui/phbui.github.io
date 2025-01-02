@@ -146,7 +146,7 @@
   flex-direction: row;
   gap: 20px;
   height: 90%;
-  width: 85%;
+  width: 95%;
 }
 
 .projectText {
@@ -192,7 +192,7 @@ a {
   margin-top: 30vh;
   height: 40vh;
   z-index: 2;
-  width: 80vw;
+  width: 92vw;
   justify-content: center;
   gap: 40px;
 }
@@ -205,10 +205,6 @@ a {
 
 .section-title {
   font-size: calc(1vw + 1vh + 0.5vmin);
-}
-
-.section .links {
-  font-size: calc(0.75vw + 0.5vh + 0.5vmin);
 }
 
 .section {
