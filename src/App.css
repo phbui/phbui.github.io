@@ -302,10 +302,11 @@ a {
     flex-direction: column;
     width: 90%;
     gap: 20px;
+    height: 60vh;
   }
 
   .carousel-container {
-    height: 70%;
+    height: 80%;
   }
 
   .section {
@@ -314,7 +315,7 @@ a {
   }
 
   .carousel-indicators {
-    bottom: 0%;
+    bottom: 7.5%;
   }
 
   .indicator {
@@ -323,8 +324,8 @@ a {
   }
 
   .carousel-button {
-    bottom: -5%;
-    font-size: 5px !important;
+    bottom: 0%;
+    font-size: 20px !important;
   }
 
   .projectItem {
