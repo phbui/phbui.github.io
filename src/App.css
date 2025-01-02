@@ -301,6 +301,11 @@ a {
     margin-top: 0;
     flex-direction: column;
     width: 90%;
+    gap: 20px;
+  }
+
+  .carousel-container {
+    height: 70%;
   }
 
   .section {
@@ -320,14 +325,6 @@ a {
   .carousel-button {
     bottom: -5%;
     font-size: 5px !important;
-  }
-
-  .carousel-button.prev {
-    left: 20vw;
-  }
-
-  .carousel-button.next {
-    right: 20vw;
   }
 
   .projectItem {
