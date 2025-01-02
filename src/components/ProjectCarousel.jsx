@@ -1,5 +1,4 @@
-// Import necessary components and libraries
-import React, { useState } from "react";
+import React from "react";
 import Carousel from "./Carousel";
 import Project from "./Project";
 import huIMG from "../assets/chatgpt.jpg";
@@ -10,11 +9,10 @@ import untitledIMG from "../assets/untitled.jpg";
 import tarotIMG from "../assets/tarot.jpg";
 import tuftsIMG from "../assets/tufts.jpg";
 
-// Project data arrays
 const academicProjects = [
   {
     img: tuftsIMG,
-    title: "Computer Vision-Guided Sphero Swarm Navigation",
+    title: "Sphero Swarm",
     link: "https://www.are.na/block/33345533",
     text: "A framework for Sphero swarm navigation using probabilistic methods and computer vision, developed for Tufts' CS robotics research.",
   },
@@ -26,7 +24,7 @@ const academicProjects = [
   },
   {
     img: tuftsIMG,
-    title: "Robot System Study: Manual vs Autonomous Controls",
+    title: "Robot System Study",
     link: "https://www.are.na/block/33345530",
     text: "Explored human preferences in manual vs autonomous control of Sphero robots, emphasizing trust and adaptability in navigation systems.",
   },
@@ -77,40 +75,13 @@ const miscellaneousProjects = [
   },
 ];
 
-// Main component
 const ProjectCarousel = () => {
-  const [expandedSection, setExpandedSection] = useState(null);
-
-  const toggleSection = (section) => {
-    setExpandedSection(expandedSection === section ? null : section);
-  };
-
   return (
     <div className="projects-container">
       {/* Academic Section */}
-      <div
-        className={`section`}
-        style={{
-          width:
-            expandedSection === "academic"
-              ? "100%"
-              : expandedSection === null
-              ? "50%"
-              : "0%",
-          height: expandedSection === "academic" ? "100%" : "80px",
-          transition: "all 0.5s ease",
-        }}
-        onClick={() => toggleSection("academic")}
-      >
-        <pre className="section-title">Academic (📓)</pre>
-        <div
-          className="carousel-container"
-          style={{
-            height: expandedSection === "academic" ? "calc(20vh + 1rem)" : "0%",
-            overflow: "hidden",
-            transition: "all 0.5s ease",
-          }}
-        >
+      <div className="section academic-section">
+        <pre className="section-title">Academic</pre>
+        <div className="carousel-container">
           <Carousel>
             {academicProjects.map((project, index) => (
               <Project
@@ -119,7 +90,6 @@ const ProjectCarousel = () => {
                 title={project.title}
                 link={project.link}
                 text={project.text}
-                download={project.download}
               />
             ))}
           </Carousel>
@@ -127,30 +97,9 @@ const ProjectCarousel = () => {
       </div>
 
       {/* Miscellaneous Section */}
-      <div
-        className={`section`}
-        style={{
-          width:
-            expandedSection === "miscellaneous"
-              ? "100%"
-              : expandedSection === null
-              ? "50%"
-              : "0%",
-          height: expandedSection === "miscellaneous" ? "100%" : "80px",
-          transition: "all 0.5s ease",
-        }}
-        onClick={() => toggleSection("miscellaneous")}
-      >
-        <pre className="section-title">Miscellaneous (✪)</pre>
-        <div
-          className="carousel-container"
-          style={{
-            height:
-              expandedSection === "miscellaneous" ? "calc(20vh + 1rem)" : "0%",
-            overflow: "hidden",
-            transition: "all 0.5s ease",
-          }}
-        >
+      <div className="section miscellaneous-section">
+        <pre className="section-title">Miscellaneous</pre>
+        <div className="carousel-container">
           <Carousel>
             {miscellaneousProjects.map((project, index) => (
               <Project

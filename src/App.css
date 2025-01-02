@@ -145,8 +145,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding: 10px;
-  height: 100%;
+  height: 90%;
   width: 85%;
 }
 
@@ -191,10 +190,11 @@ a {
   flex-direction: row;
   align-items: center;
   margin-top: 30vh;
-  height: 30vh;
+  height: 40vh;
   z-index: 2;
-  width: 70vw;
+  width: 80vw;
   justify-content: center;
+  gap: 40px;
 }
 
 .projects-container pre {
@@ -208,7 +208,7 @@ a {
 }
 
 .section .links {
-  font-size: calc(1vw + 0.5vh + 0.5vmin);
+  font-size: calc(0.75vw + 0.5vh + 0.5vmin);
 }
 
 .section {
@@ -220,16 +220,15 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
-}
-
-.section:hover {
-  box-shadow: 0 0 10px rgba(254, 33, 70, 0.85), 0 0 20px rgba(254, 33, 70, 1);
+  width: 50%;
+  height: 100%;
 }
 
 /* Carousel styles */
 .carousel-container {
   position: relative;
   width: 100%;
+  height: 80%;
   overflow: hidden;
   margin-top: 1rem;
   border-top: 1px solid red;
@@ -245,7 +244,7 @@ a {
   flex: 0 0 100%;
   display: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .carousel-item.active {
@@ -254,7 +253,7 @@ a {
 
 .carousel-button {
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   background-color: transparent;
   border: none;
   color: white;
@@ -283,7 +282,7 @@ a {
   position: absolute;
   display: flex;
   justify-content: center;
-  bottom: 10%;
+  bottom: 5%;
   width: 100%;
 }
 
@@ -304,21 +303,42 @@ a {
 @media (max-width: 480px) {
   .projects-container {
     margin-top: 0;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .section {
+    width: 100%;
+    margin: 0;
   }
 
   .carousel-indicators {
     bottom: 0%;
   }
 
+  .indicator {
+    height: 5px;
+    width: 5px;
+  }
+
   .carousel-button {
-    bottom: 0%;
+    bottom: -5%;
+    font-size: 5px !important;
+  }
+
+  .carousel-button.prev {
+    left: 20vw;
+  }
+
+  .carousel-button.next {
+    right: 20vw;
   }
 
   .projectItem {
     padding: 0;
     margin-top: 10px;
     width: 95%;
-    gap: 5px;
+    gap: 10px;
   }
 
   .preText.projectText {

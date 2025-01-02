@@ -58,7 +58,7 @@ const App = () => {
       <div
         ref={aboutRef}
         className="textBox"
-        style={{ margin: "5vh -15vw 10vh 0" }}
+        style={{ margin: "5vh 30vw 10vh 0" }}
       >
         <pre>{"Some stuff about me:"}</pre>
       </div>
