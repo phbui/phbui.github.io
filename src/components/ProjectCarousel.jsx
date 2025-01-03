@@ -14,13 +14,13 @@ const academicProjects = [
     img: tuftsIMG,
     title: "Sphero Swarm",
     link: "https://www.are.na/block/33345533",
-    text: "A framework for Sphero swarm navigation using probabilistic methods and computer vision, developed for Tufts' CS robotics research.",
+    text: "A framework for Sphero swarm navigation using probabilistic methods and computer vision, developed for Tufts' human-robot interaction research.",
   },
   {
     img: wpiIMG,
     title: "Worcester PermitPro",
     link: "https://www.are.na/block/26865313",
-    text: "A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's MQP Program.",
+    text: "A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's Major Qualifying Project Program.",
   },
   {
     img: tuftsIMG,
@@ -38,7 +38,7 @@ const academicProjects = [
     img: wpiIMG,
     title: "NitroCycle",
     link: "https://github.com/IQP-NCPOGD/nitrocycle",
-    text: "An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's IQP program.",
+    text: "An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's Interactive Qualifying Project program.",
   },
   {
     img: msrsIMG,
@@ -71,7 +71,7 @@ const miscellaneousProjects = [
     img: tuftsIMG,
     title: "Haven",
     link: "https://www.are.na/block/26865372",
-    text: "A live map for anonymous incident reporting and resource location designed for Tuft's Spring 2024 Producthon.",
+    text: "A live map for anonymous incident reporting and resource location designed for Tufts' Spring 2024 Producthon.",
   },
 ];
 
