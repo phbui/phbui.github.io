@@ -3,7 +3,7 @@ import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ALink from "./components/ALink";
-import resume from "./assets/Philip Bui Resume.pdf";
+import resume from "./assets/Philip Bui - Resume.pdf";
 import ProjectCarousel from "./components/ProjectCarousel";
 
 const App = () => {
