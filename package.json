@@ -15,6 +15,7 @@
   "dependencies": {
     "@tweenjs/tween.js": "^21.0.0",
     "lodash": "^4.17.21",
+    "phbui.github.io": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.154.0"
