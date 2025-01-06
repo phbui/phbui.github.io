@@ -11,6 +11,12 @@ import tuftsIMG from "../assets/tufts.jpg";
 
 const academicProjects = [
   {
+    img: huIMG,
+    title: "AI Architecture for Storytelling",
+    link: "https://www.are.na/block/33237601",
+    text: "An AI-driven architecture for immersive storytelling, integrating procedural generation, large language models, and player behavior modeling."
+  },
+  {
     img: tuftsIMG,
     title: "Sphero Swarm",
     link: "https://www.are.na/block/33345533",
