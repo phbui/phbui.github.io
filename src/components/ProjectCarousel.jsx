@@ -48,7 +48,7 @@ const academicProjects = [
   },
   {
     img: msrsIMG,
-    title: "BWH MSRS",
+    title: "Medical Service Request System",
     link: "https://github.com/phbui/BWH-Medical-Service-Request-System",
     text: "A medical service request system (MSRS) made for Brigham and Women's Hospital (BWH) during WPI's Software Engineering course.",
   },

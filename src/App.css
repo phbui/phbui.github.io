@@ -296,7 +296,7 @@ a {
   background-color: red;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   .projects-container {
     margin-top: 0;
     flex-direction: column;
