@@ -314,19 +314,13 @@ a {
     margin: 0;
   }
 
-  .carousel-indicators {
-    bottom: 7.5%;
-  }
+
 
   .indicator {
     height: 5px;
     width: 5px;
   }
 
-  .carousel-button {
-    bottom: 0%;
-    font-size: 20px !important;
-  }
 
   .projectItem {
     padding: 0;
@@ -369,12 +363,24 @@ a {
     right: 38px;
   }
 
-  * {
-    font-size: 10px !important;
-  }
+
 }
 
 @media (max-width: 480px) {
+
+  .carousel-button {
+    bottom: 0%;
+    font-size: 20px !important;
+  }
+
+  .carousel-indicators {
+    bottom: 7.5%;
+  }
+
+  * {
+    font-size: 10px !important;
+  }
+
   .accentLine {
     display: none;
   }

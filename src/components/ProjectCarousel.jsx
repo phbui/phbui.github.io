@@ -18,7 +18,7 @@ const academicProjects = [
   },
   {
     img: tuftsIMG,
-    title: "Sphero Swarm",
+    title: "Sphero Swarm Framework",
     link: "https://www.are.na/block/33345533",
     text: "A framework for Sphero swarm navigation using probabilistic methods and computer vision, developed for Tufts' human-robot interaction research.",
   },
@@ -30,7 +30,7 @@ const academicProjects = [
   },
   {
     img: tuftsIMG,
-    title: "Robot Controls Study",
+    title: "Robot System Controls Study",
     link: "https://www.are.na/block/33345530",
     text: "Explored human preferences in manual vs autonomous control of Sphero robots, emphasizing trust and adaptability in navigation systems.",
   },
