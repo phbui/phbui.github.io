@@ -344,13 +344,6 @@ a {
     padding: 0;
   }
 
-  .accentLine {
-    display: none;
-  }
-
-  .navBar {
-    display: none;
-  }
 
   .textBox {
     padding: 8px;
@@ -380,3 +373,14 @@ a {
     font-size: 10px !important;
   }
 }
+
+@media (max-width: 480px) {
+  .accentLine {
+    display: none;
+  }
+
+  .navBar {
+    display: none;
+  }
+}
+
