@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -12,15 +12,18 @@ const App = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
 
+  const [refsLoaded, setRefsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (homeRef.current && projectsRef.current && aboutRef.current && contactRef.current) {
+      setRefsLoaded(true);
+    }
+  }, [homeRef, projectsRef, aboutRef, contactRef]);
+
   return (
     <div className="mainContainer">
       <div className="background"></div>
-      <NavBar
-        homeRef={homeRef}
-        projectsRef={projectsRef}
-        aboutRef={aboutRef}
-        contactRef={contactRef}
-      />
+      {refsLoaded && <NavBar refs={{ homeRef, projectsRef, aboutRef, contactRef }} />}
       <div className="canvasHolder">
         <ModelViewer />
       </div>

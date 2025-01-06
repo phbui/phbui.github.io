@@ -39,9 +39,6 @@ const ALink = ({ text }) => {
     <span
       className="links"
       ref={linkRef}
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
     >
       {text}
     </span>
