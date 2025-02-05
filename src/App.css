@@ -306,7 +306,11 @@ a {
   }
 
   .carousel-container {
-    height: 80%;
+    margin-top: 0;
+  }
+
+  .carousel-button {
+    font-size: 1rem;
   }
 
   .section {
@@ -314,13 +318,10 @@ a {
     margin: 0;
   }
 
-
-
   .indicator {
     height: 5px;
     width: 5px;
   }
-
 
   .projectItem {
     padding: 0;
@@ -337,7 +338,6 @@ a {
   .projectTextHolder {
     padding: 0;
   }
-
 
   .textBox {
     padding: 8px;
@@ -362,12 +362,9 @@ a {
   .rightSword {
     right: 38px;
   }
-
-
 }
 
 @media (max-width: 480px) {
-
   .carousel-button {
     bottom: 0%;
     font-size: 20px !important;
@@ -389,4 +386,3 @@ a {
     display: none;
   }
 }
-
