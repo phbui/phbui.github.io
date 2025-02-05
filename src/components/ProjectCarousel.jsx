@@ -8,13 +8,20 @@ import meIMG from "../assets/main-era.jpg";
 import untitledIMG from "../assets/untitled.jpg";
 import tarotIMG from "../assets/tarot.jpg";
 import tuftsIMG from "../assets/tufts.jpg";
+import hilabIMG from "../assets/hilab.jpg";
 
 const academicProjects = [
+  {
+    img: hilabIMG,
+    title: "Human Interaction Lab: GailBot",
+    link: "https://sites.tufts.edu/hilab/gailbot",
+    text: "Automated transcription system for conversation analysis.",
+  },
   {
     img: huIMG,
     title: "AI Architecture for Storytelling",
     link: "https://www.are.na/block/33237601",
-    text: "An AI-driven architecture for immersive storytelling, integrating procedural generation, large language models, and player behavior modeling."
+    text: "An AI-driven architecture for immersive storytelling, integrating procedural generation, large language models, and player behavior modeling.",
   },
   {
     img: tuftsIMG,
@@ -55,6 +62,12 @@ const academicProjects = [
 ];
 
 const miscellaneousProjects = [
+  {
+    img: huIMG,
+    title: "Real-Time Captioning Extension",
+    link: "https://github.com/phbui/real-time-captioning-extension",
+    text: "A real-time captioning browser extension using OpenAI's Whisper.",
+  },
   {
     img: untitledIMG,
     title: "Untitled",
