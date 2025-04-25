@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -48,7 +48,7 @@ const App = () => {
       >
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
         <pre>{"I am interested in the intersection"}</pre>
-        <pre>{"between humans and technology."}</pre>
+        <pre>{"between humans, art, and technology."}</pre>
       </div>
       <div
         ref={projectsRef}
@@ -74,8 +74,8 @@ const App = () => {
           </a>
           {"');"}
         </pre>
-        <pre>{"  let undergrad = 'B.S. in CS @ WPI';"}</pre>
-        <pre>{"  let grad = 'M.S. in HRI @ Tufts';"}</pre>
+        <pre>{"  let undergrad = '"}<a href="https://www.wpi.edu/academics/study/computer-science-bs"><ALink text="B.S. in CS" /></a>{" @ "}<a href="https://www.wpi.edu/"><ALink text="WPI" /></a>{"';"}</pre>
+        <pre>{"  let grad = '"}<a href="https://engineering.tufts.edu/cs/current-students/graduate/ms-human-robot-interaction"><ALink text="M.S. in CS:HRI" /></a>{" @ "}<a href="https://www.tufts.edu/"><ALink text="Tufts" /></a>{"';"}</pre>
         <br></br>
         <pre>
           {" "}
@@ -83,12 +83,12 @@ const App = () => {
           <span style={{ textDecoration: "underline" }}>
             {"industry_experience"}
           </span>
-          {" = () => {"}
+          {" = () => {          "}
         </pre>
         <pre> {"    return ["}</pre>
-        <pre> {"      {Amazon: 'Operations Intern'},"}</pre>
-        <pre> {"      {ProsperOn: 'Website Developer'},"}</pre>
-        <pre> {"      {enLabel: 'Full-Stack Software Engineer'}"}</pre>
+        <pre> {"      {"}<a href="https://www.amazon.com/"><ALink text="Amazon" /></a>{": 'Operations Intern'},"}</pre>
+        <pre> {"      {"}<a href="https://www.prosperon.io/"><ALink text="ProsperOn" /></a>{": 'Website Developer'},"}</pre>
+        <pre> {"      {"}<a href="https://www.enlabel.com/"><ALink text="enLabel" /></a>{": 'Software Engineer'}"}</pre>
         <pre> {"    ];"}</pre>
         <br></br>
         <pre>
@@ -100,7 +100,8 @@ const App = () => {
           {" = () => {"}
         </pre>
         <pre> {"    return ["}</pre>
-        <pre> {"      {Tufts: 'Human Interaction Lab'},"}</pre>
+        <pre> {"      {"}<a href="https://www.tufts.edu/"><ALink text="Tufts" /></a>{": '"}<a href="https://sites.tufts.edu/hilab/"><ALink text="Human Interaction Laboratory" /></a>{"'},"}</pre>
+        <pre> {"      {"}<a href="https://www.usra.edu/"><ALink text="USRA" /></a>{": '"}<a href="https://www.afrl.af.mil/"><ALink text="Air Force Research Laboratory" /></a>{"'},"}</pre>
         <pre> {"    ];"}</pre>
         <pre> {"  };"}</pre>
         <pre>{"}"}</pre>
