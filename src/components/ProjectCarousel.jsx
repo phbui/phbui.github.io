@@ -14,14 +14,26 @@ const academicProjects = [
   {
     img: hilabIMG,
     title: "Human Interaction Lab: GailBot",
-    link: "https://sites.tufts.edu/hilab/gailbot",
+    link: "https://www.gailbot.ai/",
     text: "Automated transcription system for conversation analysis.",
   },
   {
-    img: huIMG,
-    title: "AI Architecture for Storytelling",
-    link: "https://www.are.na/block/33237601",
-    text: "An AI-driven architecture for immersive storytelling, integrating procedural generation, large language models, and player behavior modeling.",
+    img: tuftsIMG,
+    title: "LLMs Can Be Judgy Too",
+    link: "https://www.are.na/block/36403350",
+    text: "Fine‑tuned LLMs can proxy human reward in PPO for facial expression RL, boosting accuracy and reducing labeling vs pure human feedback.",
+  },
+  {
+    img: tuftsIMG,
+    title: "Metrics‑Driven Safe RL for AI Driving",
+    link: "https://github.com/phbui/norm-supervised-highway",
+    text: "Normative supervisor augments RL agent actions to enforce safety norms in autonomous driving, cutting collisions and improving zero‑shot.",
+  },
+  {
+    img: tuftsIMG,
+    title: "Captioning for Neurodivergent Users",
+    link: "https://github.com/phbui/real-time-captioning-extension",
+    text: "LLM-augmented captions add tone, intent, emotion cues to audio subtitles, improving comprehension, reducing cognitive load for neurodivergent users.",
   },
   {
     img: tuftsIMG,
@@ -30,28 +42,34 @@ const academicProjects = [
     text: "A framework for Sphero swarm navigation using probabilistic methods and computer vision, developed for Tufts' human-robot interaction research.",
   },
   {
-    img: wpiIMG,
-    title: "Worcester PermitPro",
-    link: "https://www.are.na/block/26865313",
-    text: "A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's Major Qualifying Project Program.",
-  },
-  {
     img: tuftsIMG,
     title: "Robot System Controls Study",
     link: "https://www.are.na/block/33345530",
     text: "Explored human preferences in manual vs autonomous control of Sphero robots, emphasizing trust and adaptability in navigation systems.",
   },
   {
-    img: huIMG,
-    title: "ChatGPT, How Do I Design?",
-    link: "https://www.are.na/block/26865380",
-    text: "This paper advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethics.",
+    img: wpiIMG,
+    title: "Worcester PermitPro",
+    link: "https://www.are.na/block/26865313",
+    text: "A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's Major Qualifying Project Program.",
   },
   {
     img: wpiIMG,
     title: "NitroCycle",
     link: "https://github.com/IQP-NCPOGD/nitrocycle",
     text: "An augmented reality game about nitrogen cycles in farming made for Boys & Girls Club for the WPI's Interactive Qualifying Project program.",
+  },
+  {
+    img: huIMG,
+    title: "AI Architecture for Storytelling",
+    link: "https://www.are.na/block/33237601",
+    text: "An AI-driven architecture for immersive storytelling, integrating procedural generation, large language models, and player behavior modeling.",
+  },
+  {
+    img: huIMG,
+    title: "ChatGPT, How Do I Design?",
+    link: "https://www.are.na/block/26865380",
+    text: "This paper advocates for harmonious human-AI co-creation in creativity, acknowledging benefits, challenges, and ethics.",
   },
   {
     img: msrsIMG,
@@ -62,12 +80,6 @@ const academicProjects = [
 ];
 
 const miscellaneousProjects = [
-  {
-    img: huIMG,
-    title: "Real-Time Captioning Extension",
-    link: "https://github.com/phbui/real-time-captioning-extension",
-    text: "A real-time captioning browser extension using OpenAI's Whisper.",
-  },
   {
     img: untitledIMG,
     title: "Untitled",
