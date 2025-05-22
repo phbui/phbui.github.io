@@ -3,7 +3,7 @@ import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ALink from "./components/ALink";
-import resume from "./assets/Philip Bui - Resume.pdf";
+import cv from "./assets/Philip Bui - CV.pdf";
 import ProjectCarousel from "./components/ProjectCarousel";
 
 const App = () => {
@@ -15,7 +15,12 @@ const App = () => {
   const [refsLoaded, setRefsLoaded] = useState(false);
 
   useEffect(() => {
-    if (homeRef.current && projectsRef.current && aboutRef.current && contactRef.current) {
+    if (
+      homeRef.current &&
+      projectsRef.current &&
+      aboutRef.current &&
+      contactRef.current
+    ) {
       setRefsLoaded(true);
     }
   }, [homeRef, projectsRef, aboutRef, contactRef]);
@@ -23,7 +28,9 @@ const App = () => {
   return (
     <div className="mainContainer">
       <div className="background"></div>
-      {refsLoaded && <NavBar refs={{ homeRef, projectsRef, aboutRef, contactRef }} />}
+      {refsLoaded && (
+        <NavBar refs={{ homeRef, projectsRef, aboutRef, contactRef }} />
+      )}
       <div className="canvasHolder">
         <ModelViewer />
       </div>
@@ -68,14 +75,34 @@ const App = () => {
       <div className="textBox" style={{ margin: "0 -12.5vw 10vh 0" }}>
         <pre>{"const About = (phi_bui) => {"}</pre>
         <pre>
-          {"  const resume = fetch('"}
-          <a href={resume} download="Philip Bui - Resume.pdf">
-            <ALink text="resume.pdf" />
+          {"  const cv = fetch('"}
+          <a href={cv} download="Philip Bui - CV.pdf">
+            <ALink text="cv.pdf" />
           </a>
           {"');"}
         </pre>
-        <pre>{"  let undergrad = '"}<a href="https://www.wpi.edu/academics/study/computer-science-bs"><ALink text="B.S. in CS" /></a>{" @ "}<a href="https://www.wpi.edu/"><ALink text="WPI" /></a>{"';"}</pre>
-        <pre>{"  let grad = '"}<a href="https://engineering.tufts.edu/cs/current-students/graduate/ms-human-robot-interaction"><ALink text="M.S. in CS:HRI" /></a>{" @ "}<a href="https://www.tufts.edu/"><ALink text="Tufts" /></a>{"';"}</pre>
+        <pre>
+          {"  let undergrad = '"}
+          <a href="https://www.wpi.edu/academics/study/computer-science-bs">
+            <ALink text="B.S. in CS" />
+          </a>
+          {" @ "}
+          <a href="https://www.wpi.edu/">
+            <ALink text="WPI" />
+          </a>
+          {"';"}
+        </pre>
+        <pre>
+          {"  let grad = '"}
+          <a href="https://engineering.tufts.edu/cs/current-students/graduate/ms-human-robot-interaction">
+            <ALink text="M.S. in CS:HRI" />
+          </a>
+          {" @ "}
+          <a href="https://www.tufts.edu/">
+            <ALink text="Tufts" />
+          </a>
+          {"';"}
+        </pre>
         <br></br>
         <pre>
           {" "}
@@ -86,9 +113,30 @@ const App = () => {
           {" = () => {          "}
         </pre>
         <pre> {"    return ["}</pre>
-        <pre> {"      {"}<a href="https://www.amazon.com/"><ALink text="Amazon" /></a>{": 'Operations Intern'},"}</pre>
-        <pre> {"      {"}<a href="https://www.prosperon.io/"><ALink text="ProsperOn" /></a>{": 'Website Developer'},"}</pre>
-        <pre> {"      {"}<a href="https://www.enlabel.com/"><ALink text="enLabel" /></a>{": 'Software Engineer'}"}</pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.amazon.com/">
+            <ALink text="Amazon" />
+          </a>
+          {": 'Operations Intern'},"}
+        </pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.prosperon.io/">
+            <ALink text="ProsperOn" />
+          </a>
+          {": 'Website Developer'},"}
+        </pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.enlabel.com/">
+            <ALink text="enLabel" />
+          </a>
+          {": 'Software Engineer'}"}
+        </pre>
         <pre> {"    ];"}</pre>
         <br></br>
         <pre>
@@ -100,8 +148,30 @@ const App = () => {
           {" = () => {"}
         </pre>
         <pre> {"    return ["}</pre>
-        <pre> {"      {"}<a href="https://www.tufts.edu/"><ALink text="Tufts" /></a>{": '"}<a href="https://sites.tufts.edu/hilab/"><ALink text="Human Interaction Laboratory" /></a>{"'},"}</pre>
-        <pre> {"      {"}<a href="https://www.usra.edu/"><ALink text="USRA" /></a>{": '"}<a href="https://www.afrl.af.mil/"><ALink text="Air Force Research Laboratory" /></a>{"'},"}</pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.tufts.edu/">
+            <ALink text="Tufts" />
+          </a>
+          {": '"}
+          <a href="https://sites.tufts.edu/hilab/">
+            <ALink text="Human Interaction Laboratory" />
+          </a>
+          {"'},"}
+        </pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.usra.edu/">
+            <ALink text="USRA" />
+          </a>
+          {": '"}
+          <a href="https://www.afrl.af.mil/">
+            <ALink text="Air Force Research Laboratory" />
+          </a>
+          {"'},"}
+        </pre>
         <pre> {"    ];"}</pre>
         <pre> {"  };"}</pre>
         <pre>{"}"}</pre>

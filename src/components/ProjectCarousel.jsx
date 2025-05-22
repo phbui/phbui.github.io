@@ -26,7 +26,7 @@ const academicProjects = [
   {
     img: tuftsIMG,
     title: "Metrics‑Driven Safe RL for AI Driving",
-    link: "https://github.com/phbui/norm-supervised-highway",
+    link: "https://www.are.na/block/36445938",
     text: "Normative supervisor augments RL agent actions to enforce safety norms in autonomous driving, cutting collisions and improving zero‑shot.",
   },
   {
