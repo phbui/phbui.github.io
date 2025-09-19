@@ -3,7 +3,7 @@ import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ALink from "./components/ALink";
-import cv from "./assets/Philip Bui - CV.pdf";
+import resume from "./assets/Philip Bui - Resume.pdf";
 import ProjectCarousel from "./components/ProjectCarousel";
 
 const App = () => {
@@ -55,7 +55,7 @@ const App = () => {
       >
         <pre>{"Hello, my name is Phi (Φ),"}</pre>
         <pre>{"I am interested in the intersection"}</pre>
-        <pre>{"between humans, art, and technology."}</pre>
+        <pre>{"between humans and technology."}</pre>
       </div>
       <div
         ref={projectsRef}
@@ -75,9 +75,9 @@ const App = () => {
       <div className="textBox" style={{ margin: "0 -12.5vw 10vh 0" }}>
         <pre>{"const About = (phi_bui) => {"}</pre>
         <pre>
-          {"  const cv = fetch('"}
-          <a href={cv} download="Philip Bui - CV.pdf">
-            <ALink text="cv.pdf" />
+          {"  const resume = fetch('"}
+          <a href={resume} download="Philip Bui - Resume.pdf">
+            <ALink text="resume.pdf" />
           </a>
           {"');"}
         </pre>
@@ -110,7 +110,7 @@ const App = () => {
           <span style={{ textDecoration: "underline" }}>
             {"industry_experience"}
           </span>
-          {" = () => {          "}
+          {" = () => {           "}
         </pre>
         <pre> {"    return ["}</pre>
         <pre>
@@ -121,21 +121,13 @@ const App = () => {
           </a>
           {": 'Operations Intern'},"}
         </pre>
-        <pre>
+          <pre>
           {" "}
           {"      {"}
-          <a href="https://www.prosperon.io/">
-            <ALink text="ProsperOn" />
+          <a href="https://www.cyvl.com/">
+            <ALink text="CYVL" />
           </a>
-          {": 'Website Developer'},"}
-        </pre>
-        <pre>
-          {" "}
-          {"      {"}
-          <a href="https://www.enlabel.com/">
-            <ALink text="enLabel" />
-          </a>
-          {": 'Software Engineer'}"}
+          {": 'Full-Stack Software Engineer'}"}
         </pre>
         <pre> {"    ];"}</pre>
         <br></br>
@@ -187,8 +179,8 @@ const App = () => {
         <pre>{"const Contact = {            "} </pre>
         <pre>
           {"  {email: "}
-          <a href="mailto:bilphui@gmail.com">
-            <ALink text="bilphui@gmail.com" />
+          <a href="mailto:phi@cyvl.ai">
+            <ALink text="phi@cyvl.ai" />
           </a>
           {"},"}
         </pre>
