@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import ALink from "./components/ALink";
 import resume from "./assets/Philip Bui - Resume.pdf";
+import cv from "./assets/Philip Bui - CV.pdf";
 import ProjectCarousel from "./components/ProjectCarousel";
 
 const App = () => {
@@ -82,6 +83,14 @@ const App = () => {
           {"');"}
         </pre>
         <pre>
+          {"  const cv = fetch('"}
+          <a href={cv} download="Philip Bui - CV.pdf">
+            <ALink text="cv.pdf" />
+          </a>
+          {"');"}
+        </pre>
+        <pre>
+          {"\n"}
           {"  let undergrad = '"}
           <a href="https://www.wpi.edu/academics/study/computer-science-bs">
             <ALink text="B.S. in CS" />
@@ -93,13 +102,24 @@ const App = () => {
           {"';"}
         </pre>
         <pre>
-          {"  let grad = '"}
+          {"  let grad_1 = '"}
           <a href="https://engineering.tufts.edu/cs/current-students/graduate/ms-human-robot-interaction">
             <ALink text="M.S. in CS:HRI" />
           </a>
           {" @ "}
           <a href="https://www.tufts.edu/">
             <ALink text="Tufts" />
+          </a>
+          {"';"}
+        </pre>
+        <pre>
+          {"  let grad_2 = '"}
+          <a href="https://engineering.nyu.edu/academics/programs/urban-systems-phd">
+            <ALink text="Ph.D. in Urban Systems" />
+          </a>
+          {" @ "}
+          <a href="https://www.nyu.edu/">
+            <ALink text="NYU" />
           </a>
           {"';"}
         </pre>
