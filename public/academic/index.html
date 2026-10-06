@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phi Bui</title>
+<meta name="description" content="Phi Bui, PhD student in Urban Systems at NYU Tandon. Measurement uncertainty in repeat and autonomous scanning of urban infrastructure.">
+<link rel="icon" href="assets/favicon.ico">
+<style>
+  :root{
+    --bg:#fbfaf7; --fg:#1c1b19; --muted:#5f5c55; --line:#dcd8cf; --accent:#2f5d50; --card:#fff;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#15171a; --fg:#e8e6df; --muted:#a19e96; --line:#2f3238; --accent:#86c7ae; --card:#1c1f24; }
+  }
+  *{box-sizing:border-box}
+  html{color-scheme:light dark}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Georgia,"Times New Roman",serif}
+  .wrap{max-width:820px;margin:0 auto;padding:40px 20px 64px}
+  header{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:26px}
+  .photo{width:150px;height:150px;border-radius:6px;object-fit:cover;background:var(--card);border:1px solid var(--line);flex:0 0 auto}
+  .id{flex:1 1 320px}
+  h1{font-size:30px;margin:0 0 4px;letter-spacing:-.01em}
+  .role{color:var(--muted);margin:0 0 10px}
+  .links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+  a:hover{border-bottom-color:var(--accent)}
+  h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:34px 0 10px}
+  p{margin:10px 0}
+  .pub{margin:12px 0;padding-left:0}
+  .pub .t{font-weight:700}
+  .pub .v{color:var(--muted)}
+  ul{padding-left:20px;margin:6px 0}
+  li{margin:6px 0}
+  .item b{font-weight:700}
+  .item span{color:var(--muted)}
+  footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="photo" src="assets/phi.jpg" alt="Phi Bui" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 150 150%22><rect width=%22150%22 height=%22150%22 fill=%22%23e4efea%22/><text x=%2275%22 y=%2290%22 text-anchor=%22middle%22 font-family=%22Georgia%22 font-size=%2248%22 fill=%22%232f5d50%22>Φ</text></svg>'">
+  <div class="id">
+    <h1>Phi Bui</h1>
+    <p class="role">PhD student, Urban Systems · Department of Civil and Urban Engineering · NYU Tandon School of Engineering<br>Advisor: <a href="https://engineering.nyu.edu/faculty/debra-laefer">Debra F. Laefer</a>, Urban Modeling Group</p>
+    <div class="links">
+      <a href="mailto:pb2963@nyu.edu">pb2963@nyu.edu</a>
+      <a href="assets/Philip-Bui-CV.pdf">CV (PDF)</a>
+      <a href="https://github.com/phbui">GitHub</a>
+      <a href="https://www.linkedin.com/in/phi-bui/">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<h2>Research</h2>
+<p>Two scans of the same unchanged street disagree. My thesis measures that disagreement on city-scale repeat lidar, states what a survey at a given point density can and cannot see, and turns the result into a calibrated bound per asset that a planner, an inspector, or a runtime supervisor for a learned policy can act on. The work sits between measurement science and machine learning: error budgets for repeat aerial scans, probability-of-detection curves for infrastructure features, and bounded reporting for autonomous systems.</p>
+<p>Before the PhD I spent a year at <a href="https://www.cyvl.com/">Cyvl</a> building lidar and imagery pipelines for municipal road networks, an internship at the Air Force Research Laboratory on multi-agent reinforcement learning, and a master's at Tufts on human-robot interaction. The through-line is the same question: when a machine reports on the physical world, how far can the report be trusted, and does it say so.</p>
+
+<h2>Publications</h2>
+<div class="pub">
+  <div class="t">State-Wise Constrained Policy Shaping for Zero-Shot Runtime Behavior Steering</div>
+  <div>Thomas Howell, Phi Bui, Robert McPherson, Vasanth Sarathy</div>
+  <div class="v"><a href="https://aigovernance.github.io/">AAAI-26 Workshop on AI Governance (AIGOV)</a>, Singapore, 2026. Oral presentation. Peer-reviewed workshop paper.</div>
+</div>
+<div class="pub">
+  <div class="t">Scoring Rules Certify Reporting, Not Seeking: A Dilemma for Level-Based Rewards in Sequential, Embodied Perception</div>
+  <div>Phi Bui</div>
+  <div class="v">IROS 2026 Full-Shift Robot Co-Workers workshop, 2026. Poster. Non-archival workshop.</div>
+</div>
+<p style="color:var(--muted);font-size:15px">Manuscripts under review and in preparation are listed on the <a href="assets/Philip-Bui-CV.pdf">CV</a>.</p>
+
+<h2>Code</h2>
+<ul>
+  <li class="item"><b><a href="https://github.com/phbui/civic-honesty-benchmark">civic-honesty-benchmark</a></b> <span>· a live-data benchmark of language-model agents over NYC street-pavement open data; gold answers are recomputed against the live API.</span></li>
+  <li class="item"><b><a href="https://github.com/phbui/sphero-swarm">sphero-swarm</a></b> <span>· overhead-camera localization and probabilistic path planning for Sphero robot swarms (Tufts).</span></li>
+  <li class="item"><b><a href="https://github.com/phbui/real-time-captioning-extension">real-time-captioning-extension</a></b> <span>· a Chrome extension for live captioning of a browser tab's audio with Whisper.</span></li>
+  <li class="item"><b><a href="https://github.com/phbui/persona">persona</a></b> <span>· reinforcement-learning-driven NPC dialogue with LLMs and emotion analysis.</span></li>
+</ul>
+
+<h2>Experience</h2>
+<ul>
+  <li class="item"><b>Full-Stack Software Engineer, Cyvl</b> <span>· 2025 to 2026. Production pipelines over petabyte-scale georeferenced imagery and lidar for municipal pavement, signs, markings, and assets; winning submission to the NYC DEP Environmental Technology Lab Challenge, 2026.</span></li>
+  <li class="item"><b>Swarm Robotics AI Research Intern, Air Force Research Laboratory</b> <span>· summer 2025, Eglin AFB. Multi-agent reinforcement learning for swarm coordination under communication constraints.</span></li>
+  <li class="item"><b>Graduate Research Assistant, Human Interaction Lab, Tufts University</b> <span>· 2025. GailBot, a transcription pipeline for conversation-analytic research; presented at the ICCA-26 workshop "Using AI within CA Workflows."</span></li>
+  <li class="item"><b>Major Qualifying Project, WPI</b> <span>· 2023. An AI-assisted land-acquisition platform built with the City of Worcester, now part of its low-income housing development pipeline.</span></li>
+</ul>
+
+<h2>Education</h2>
+<ul>
+  <li class="item"><b>PhD in Urban Systems</b> <span>· New York University Tandon School of Engineering, 2026 to present. School of Engineering PhD Fellowship.</span></li>
+  <li class="item"><b>M.S. in Computer Science, Human-Robot Interaction</b> <span>· Tufts University, 2025.</span></li>
+  <li class="item"><b>B.S. in Computer Science, with distinction</b> <span>· Worcester Polytechnic Institute, 2023.</span></li>
+</ul>
+
+<h2>Teaching and Service</h2>
+<ul>
+  <li class="item"><span>Instructor, "Infrastructure Intelligence" sessions, Public Innovation Institute × Cyvl summer program, 2025 to 2026.</span></li>
+  <li class="item"><span>Co-founder and Chief Logistics Officer, Untitled LLC, a Boston arts collective, 2023 to 2026; Honos Civicus Society, Jonathan M. Tisch College of Civic Life, Tufts, 2025.</span></li>
+  <li class="item"><span>Freelance front-end developer and educator for local artists, 2023 to present.</span></li>
+</ul>
+
+<footer>Updated October 2026.</footer>
+</div>
+</body>
+</html>
