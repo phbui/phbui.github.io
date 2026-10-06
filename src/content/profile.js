@@ -25,5 +25,5 @@ export const profile = {
     { id: "resume", label: "resume.pdf", file: "resume", download: "Philip Bui - Resume.pdf" },
     { id: "cv", label: "cv.pdf", file: "cv", download: "Philip Bui - CV.pdf" },
   ],
-  pages: [{ id: "academic", label: "Academic", href: "/academic/" }],
+  pages: [{ id: "academic_site", label: "Academic", href: "/academic/" }],
 };
