@@ -9,13 +9,14 @@ import untitledIMG from "../assets/untitled.jpg";
 import tarotIMG from "../assets/tarot.jpg";
 import tuftsIMG from "../assets/tufts.jpg";
 import hilabIMG from "../assets/hilab.jpg";
+import hamiIMG from "../assets/hami.jpg";
 
 const academicProjects = [
   {
     img: hilabIMG,
     title: "Human Interaction Lab: GailBot",
     link: "https://www.gailbot.ai/",
-    text: "Automated transcription system for conversation analysis.",
+    text: "PyPI-distributed transcription pipeline for conversation analysis. I led its back-end overhaul.",
   },
   {
     img: tuftsIMG,
@@ -27,7 +28,13 @@ const academicProjects = [
     img: tuftsIMG,
     title: "Metrics‑Driven Safe RL for AI Driving",
     link: "https://www.are.na/block/36445938",
-    text: "Normative supervisor augments RL agent actions to enforce safety norms in autonomous driving, cutting collisions and improving zero‑shot.",
+    text: "A post-training supervisor that enforces safety norms on DQN agents in HighwayEnv. The paper is listed under Publications.",
+  },
+  {
+    img: hamiIMG,
+    title: "Civic Honesty Benchmark",
+    link: "https://github.com/phbui/civic-honesty-benchmark",
+    text: "A live-data benchmark of 596 questions over a municipal open-data API. The dataset and episode logs are public. The paper is listed under Publications.",
   },
   {
     img: tuftsIMG,
@@ -51,7 +58,7 @@ const academicProjects = [
     img: wpiIMG,
     title: "Worcester PermitPro",
     link: "https://www.are.na/block/26865313",
-    text: "A blockchain-based smart contract system that aims to streamline low-income housing development in Worcester for WPI's Major Qualifying Project Program.",
+    text: "An AI-assisted land-acquisition and financing platform for low-income housing in Worcester, with GIS layers, open municipal data and blockchain-published records. Built for WPI's Major Qualifying Project.",
   },
   {
     img: wpiIMG,
@@ -84,7 +91,7 @@ const miscellaneousProjects = [
     img: untitledIMG,
     title: "Untitled",
     link: "https://untitled.boston/",
-    text: "A website I made for a start-up entertainment consultancy, Untitled LLC in Boston, MA.",
+    text: "A website I made for Untitled LLC, the underground arts collective I co-founded in Boston, MA.",
   },
   {
     img: tarotIMG,

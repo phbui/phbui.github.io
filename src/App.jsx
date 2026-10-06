@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { Fragment, useRef, useEffect, useState } from "react";
 import ModelViewer from "./components/ModelViewer";
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -6,6 +6,67 @@ import ALink from "./components/ALink";
 import resume from "./assets/Philip Bui - Resume.pdf";
 import cv from "./assets/Philip Bui - CV.pdf";
 import ProjectCarousel from "./components/ProjectCarousel";
+
+const publications = [
+  {
+    lines: [
+      ["State-Wise Constrained Policy Shaping for"],
+      ["Zero-Shot Runtime Behavior Steering"],
+      ["T. Howell, P. Bui, R. McPherson, V. Sarathy"],
+      [
+        {
+          text: "AAAI-26 Workshop on AI Governance (AIGOV)",
+          href: "https://aigovernance.github.io/",
+        },
+      ],
+      ["Singapore, 2026. Oral."],
+      ["Collisions fell 97% in-distribution and 99% zero-shot."],
+    ],
+  },
+  {
+    lines: [
+      ["Scoring Rules Certify Reporting, Not Seeking:"],
+      ["A Dilemma for Level-Based Rewards in Sequential,"],
+      ["Embodied Perception"],
+      ["P. Bui"],
+      ["Poster, IROS 2026 Full-Shift Robot Co-Workers"],
+      ["workshop (non-archival), Pittsburgh."],
+      ["Proper scoring rules reward honest reporting, not seeking."],
+    ],
+  },
+  {
+    lines: [
+      ["Do Agents Disclose What the Data Cannot Support?"],
+      ["A Live-Data Benchmark for Abstention,"],
+      ["Measurement-Uncertainty Caveats, and Missingness"],
+      ["Disclosure over Municipal Open Data"],
+      ["P. Bui, 2026. Released as a benchmark."],
+      [
+        "Code and data: ",
+        {
+          text: "civic-honesty-benchmark",
+          href: "https://github.com/phbui/civic-honesty-benchmark",
+        },
+      ],
+      ["A production model disclosed a findable defect in 0 of 108 answers."],
+    ],
+  },
+];
+
+const honors = [
+  [
+    "Tandon School of Engineering Ph.D. Fellowship, NYU, 2026",
+  ],
+  [
+    "NYC DEP Environmental Technology Lab Challenge, Cyvl, 2026",
+  ],
+  [
+    "Honos Civicus Society, Tufts, 2025",
+  ],
+  [
+    "Upsilon Pi Epsilon, WPI, 2021-2023",
+  ],
+];
 
 const App = () => {
   const homeRef = useRef(null);
@@ -148,7 +209,15 @@ const App = () => {
           </a>
           {": 'Operations Intern'},"}
         </pre>
-          <pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.enlabel.com/">
+            <ALink text="enLabel" />
+          </a>
+          {": 'Software Engineer, Jan 2024 - Jan 2025'},"}
+        </pre>
+        <pre>
           {" "}
           {"      {"}
           <a href="https://www.cyvl.com/">
@@ -157,6 +226,7 @@ const App = () => {
           {": 'Full-Stack Software Engineer, 2025-2026'}"}
         </pre>
         <pre> {"    ];"}</pre>
+        <pre> {"  };"}</pre>
         <br></br>
         <pre>
           {" "}
@@ -191,6 +261,65 @@ const App = () => {
           </a>
           {", summer 2025'},"}
         </pre>
+        <pre>
+          {" "}
+          {"      {"}
+          <a href="https://www.wpi.edu/">
+            <ALink text="WPI" />
+          </a>
+          {": 'AI Futures Collab, summer 2025'},"}
+        </pre>
+        <pre> {"    ];"}</pre>
+        <pre> {"  };"}</pre>
+        <br></br>
+        <pre>
+          {" "}
+          {"  const "}
+          <span style={{ textDecoration: "underline" }}>
+            {"publications"}
+          </span>
+          {" = () => {"}
+        </pre>
+        <pre> {"    return ["}</pre>
+        {publications.map((pub, i) => (
+          <Fragment key={i}>
+            {pub.lines.map((line, j) => (
+              <pre key={j}>
+                {j === 0 ? "      {'" : "        "}
+                {line.map((seg, k) =>
+                  typeof seg === "string" ? (
+                    seg
+                  ) : (
+                    <a key={k} href={seg.href}>
+                      <ALink text={seg.text} />
+                    </a>
+                  )
+                )}
+                {j === pub.lines.length - 1 ? "'}," : ""}
+              </pre>
+            ))}
+            <br></br>
+          </Fragment>
+        ))}
+        <pre> {"    ];"}</pre>
+        <pre> {"  };"}</pre>
+        <br></br>
+        <pre>
+          {" "}
+          {"  const "}
+          <span style={{ textDecoration: "underline" }}>
+            {"honors"}
+          </span>
+          {" = () => {"}
+        </pre>
+        <pre> {"    return ["}</pre>
+        {honors.map((line, i) => (
+          <pre key={i}>
+            {"      '"}
+            {line}
+            {"',"}
+          </pre>
+        ))}
         <pre> {"    ];"}</pre>
         <pre> {"  };"}</pre>
         <pre>{"}"}</pre>
