@@ -72,7 +72,7 @@ const Layout = () => {
       >
         <pre>{profile.sections.about}</pre>
       </div>
-      <div className="textBox" style={{ margin: "0 -12.5vw 10vh 0" }}>
+      <div className="textBox aboutCode" style={{ margin: "0 -12.5vw 10vh 0" }}>
         <AboutCode />
       </div>
       <div

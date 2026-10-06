@@ -71,7 +71,7 @@ export const publications = [
       ["Disclosure over Municipal Open Data"],
       ["P. Bui, 2026. Released as a benchmark."],
       ["Code and data: ", { text: "civic-honesty-benchmark", href: "https://github.com/phbui/civic-honesty-benchmark" }],
-      ["A production model disclosed a findable defect in 0 of 108 answers."],
+      ["A production model disclosed a findable defect in 0 of 108 eligible answers."],
     ],
   },
   {

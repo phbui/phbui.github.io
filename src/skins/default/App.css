@@ -385,4 +385,12 @@ a {
   .navBar {
     display: none;
   }
+
+  /* The About code block is wider than a phone screen. Keep it inside the
+     viewport and let it scroll sideways instead of clipping both edges. */
+  .aboutCode {
+    margin: 0 0 10vh 0 !important;
+    max-width: 92vw;
+    overflow-x: auto;
+  }
 }

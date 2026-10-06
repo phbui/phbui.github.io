@@ -199,7 +199,7 @@ export const projects = [
     track: "misc",
     image: "tufts",
     link: "https://www.are.na/block/26865372",
-    text: "A live map for anonymous incident reporting and resource location. It won 1st place in the Health/Wellness category at Tufts' Spring 2024 Producthon.",
+    text: "A live map for anonymous incident reporting and resource location. It won 1st place in the Health/Wellness category at the Tufts Producthon Sprint 2024.",
     dates: "Feb 2024",
     organization: "Tufts University",
     course: "Tufts Producthon Sprint 2024",
