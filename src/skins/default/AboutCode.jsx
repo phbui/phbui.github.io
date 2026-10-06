@@ -1,5 +1,61 @@
-import { Fragment, useState } from "react";
+import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import ALink from "./ALink";
+
+// Hovering a link appends a "<" after it, which widens its line. Reserve that width up
+// front so the block never shifts on hover: measure every rendered line plus one "<" per
+// link on it, and set the container's min-width to the widest. Re-measure when arrays
+// open or close (opening may grow the block; that is allowed) and on resize, because the
+// font size is viewport-relative.
+const useHoverStableWidth = (anchorRef) => {
+  useLayoutEffect(() => {
+    const container = anchorRef.current && anchorRef.current.parentElement;
+    if (!container) return undefined;
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    const measure = () => {
+      let widest = 0;
+      for (const pre of container.querySelectorAll(":scope > pre")) {
+        const range = document.createRange();
+        range.selectNodeContents(pre);
+        const text = range.getBoundingClientRect().width;
+        const style = getComputedStyle(pre);
+        ctx.font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+        const caret = ctx.measureText("<").width;
+        const links = pre.querySelectorAll(".links").length;
+        // A hovered link already shows its "<", so the measured text includes one caret.
+        const hovered = pre.querySelectorAll(".links:hover").length;
+        widest = Math.max(widest, text - hovered * caret + links * caret);
+      }
+      const cs = getComputedStyle(container);
+      // min-width applies to the content box unless box-sizing says otherwise.
+      const extra =
+        cs.boxSizing === "border-box"
+          ? parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight) +
+            parseFloat(cs.borderLeftWidth) + parseFloat(cs.borderRightWidth)
+          : 0;
+      // On phones the block is capped at 92vw and scrolls sideways; never push past that.
+      const cap = window.innerWidth <= 480 ? window.innerWidth * 0.92 : Infinity;
+      container.style.minWidth = `${Math.ceil(Math.min(widest + extra, cap))}px`;
+    };
+    measure();
+    // The link glitch rewrites text inside .links on hover. Those mutations never change
+    // the layout, so skip them and re-measure only when lines are added or removed.
+    const observer = new MutationObserver((records) => {
+      const structural = records.some((r) => {
+        const el = r.target.nodeType === 1 ? r.target : r.target.parentElement;
+        return !(el && el.closest(".links"));
+      });
+      if (structural) measure();
+    });
+    observer.observe(container, { childList: true, subtree: true });
+    window.addEventListener("resize", measure);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measure);
+      container.style.minWidth = "";
+    };
+  }, [anchorRef]);
+};
 import { files } from "../../assets";
 import {
   profile,
@@ -54,7 +110,7 @@ const ArrayBlock = ({ name, pad = "", children }) => {
             }
           }}
         >
-          {name}
+          <ALink text={name} />
         </span>
         {" = () => {" + (open ? pad : "")}
         {open ? "" : " [...] };"}
@@ -83,9 +139,12 @@ const ExperienceLines = ({ list, lastComma }) =>
     </pre>
   ));
 
-export const AboutCode = () => (
+export const AboutCode = () => {
+  const anchorRef = useRef(null);
+  useHoverStableWidth(anchorRef);
+  return (
   <>
-    <pre>{`const About = (${profile.aboutVar}) => {`}</pre>
+    <pre ref={anchorRef}>{`const About = (${profile.aboutVar}) => {`}</pre>
     {profile.documents.map((d) => (
       <pre key={d.id}>
         {`  const ${d.id} = fetch('`}
@@ -149,7 +208,8 @@ export const AboutCode = () => (
     </ArrayBlock>
     <pre>{"}"}</pre>
   </>
-);
+  );
+};
 
 export const ContactCode = () => (
   <>

@@ -117,19 +117,23 @@
   content: "<";
 }
 
-/* Array names in the About code block toggle their contents open and closed. */
+/* Array names in the About code block toggle their contents open and closed. They look
+   like every other link, red with the glitch, and stay underlined so they read as controls. */
 .arrayToggle {
   cursor: pointer;
-  text-decoration: none;
-  transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
 }
 
-.arrayToggle:hover,
-.arrayToggle:focus-visible {
-  color: red;
+.arrayToggle .links {
   text-decoration: underline;
-  text-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
+}
+
+.arrayToggle:focus-visible {
   outline: none;
+}
+
+.arrayToggle:focus-visible .links {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.75);
 }
 
 .projects {
