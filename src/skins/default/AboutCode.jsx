@@ -99,7 +99,7 @@ export const AboutCode = () => (
       <ExperienceLines list={community} lastComma={true} />
     </ArrayBlock>
     <br></br>
-    <ArrayBlock name="publications">
+    <ArrayBlock name="publications_and_presentations">
       {publications.map((pub) => (
         <Fragment key={pub.id}>
           {pub.lines.map((line, j) => (
