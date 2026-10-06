@@ -39,7 +39,7 @@ export const projects = [
   },
   {
     id: "metrics-driven-safe-rl-for-ai-driving",
-    title: "Metrics‑Driven Safe RL for AI Driving",
+    title: "Metrics-Driven Safe RL",
     track: "academic",
     image: "tufts",
     link: "https://www.are.na/block/36445938",
@@ -66,7 +66,7 @@ export const projects = [
   },
   {
     id: "caption-enrichment-for-neurodivergent-users",
-    title: "Caption Enrichment for Neurodivergent Users",
+    title: "Caption Enrichment",
     track: "academic",
     image: "tufts",
     link: "https://github.com/phbui/real-time-captioning-extension",
@@ -221,7 +221,7 @@ export const projects = [
   },
   {
     id: "powerlifting-empowerment-workshop",
-    title: "WPI Powerlifting Feminine Empowerment Workshop",
+    title: "Empowerment Workshop",
     track: "misc",
     image: "wpi",
     link: LINKEDIN,
