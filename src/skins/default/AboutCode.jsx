@@ -6,6 +6,7 @@ import {
   education,
   industry,
   research,
+  community,
   publications,
   honors,
   contact,
@@ -51,7 +52,7 @@ const ExperienceLines = ({ list, lastComma }) =>
     <pre key={e.id}>
       {" "}
       {"      {"}
-      <Linked href={e.aboutUrl} text={e.aboutLabel} />
+      {e.aboutUrl ? <Linked href={e.aboutUrl} text={e.aboutLabel} /> : <ALink text={e.aboutLabel} />}
       {": '"}
       <Segments items={e.about} />
       {"'}" + (i < list.length - 1 || lastComma ? "," : "")}
@@ -92,6 +93,10 @@ export const AboutCode = () => (
     <br></br>
     <ArrayBlock name="research_experience">
       <ExperienceLines list={research} lastComma={true} />
+    </ArrayBlock>
+    <br></br>
+    <ArrayBlock name="community_experience">
+      <ExperienceLines list={community} lastComma={true} />
     </ArrayBlock>
     <br></br>
     <ArrayBlock name="publications">

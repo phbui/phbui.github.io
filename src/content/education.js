@@ -18,6 +18,8 @@ export const education = [
     schoolUrl: "https://www.wpi.edu/",
     start: "2021-08",
     end: "2023-12",
+    gpa: "3.8/4.0",
+    notes: "Graduated with distinction.",
   },
   {
     id: "tufts-ms",
@@ -29,6 +31,7 @@ export const education = [
     schoolUrl: "https://www.tufts.edu/",
     start: "2024-09",
     end: "2025-05",
+    gpa: "3.8/4.0",
   },
   {
     id: "nyu-phd",
@@ -40,5 +43,6 @@ export const education = [
     schoolUrl: "https://www.nyu.edu/",
     start: "2026-09",
     end: null,
+    notes: "Advised by Dr. Debra Laefer, Urban Modeling Group. Studying honest uncertainty in urban infrastructure sensing.",
   },
 ];

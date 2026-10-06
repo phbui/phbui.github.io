@@ -1,12 +1,20 @@
-// Papers and presentations.
+// Papers and presentations, newest work first within each status.
 // Fields:
-//   id, title, authors, venue, venueUrl, place, year, status ("Published", "Under review", ...)
+//   id, title, authors, venue, venueUrl, place, year, status ("Published", "Under review", "In preparation", ...)
 //   lines   the pre-wrapped display lines used by the About code block. Each line is an array of
 //           segments. A segment is a plain string or { text, href } for a link.
 //   projectId  optional id of the project card that describes the artifact
 export const publications = [
   {
     id: "scps-workshop",
+    title: "State-Wise Constrained Policy Shaping for Zero-Shot Runtime Behavior Steering",
+    authors: "T. Howell, P. Bui, R. McPherson, V. Sarathy",
+    venue: "AAAI-26 Workshop on AI Governance (AIGOV)",
+    venueUrl: "https://aigovernance.github.io/",
+    place: "Singapore",
+    year: "2026",
+    status: "Published. Oral.",
+    projectId: "metrics-driven-safe-rl-for-ai-driving",
     lines: [
       ["State-Wise Constrained Policy Shaping for"],
       ["Zero-Shot Runtime Behavior Steering"],
@@ -17,7 +25,28 @@ export const publications = [
     ],
   },
   {
+    id: "scps-full",
+    title: "State-Wise Constrained Policy Shaping for Runtime Normative Supervision",
+    venue: "AAAI-27 Main Technical Track",
+    year: "2026",
+    status: "Under review. Advanced to Phase 2, September 2026.",
+    projectId: "metrics-driven-safe-rl-for-ai-driving",
+    lines: [
+      ["State-Wise Constrained Policy Shaping for"],
+      ["Runtime Normative Supervision"],
+      ["Full-paper version of the AIGOV workshop paper."],
+      ["AAAI-27 Main Technical Track. Under review,"],
+      ["advanced to Phase 2 (September 2026)."],
+    ],
+  },
+  {
     id: "scoring-rules",
+    title: "Scoring Rules Certify Reporting, Not Seeking: A Dilemma for Level-Based Rewards in Sequential, Embodied Perception",
+    authors: "P. Bui",
+    venue: "IROS 2026 Full-Shift Robot Co-Workers workshop (non-archival)",
+    place: "Pittsburgh",
+    year: "2026",
+    status: "Poster",
     lines: [
       ["Scoring Rules Certify Reporting, Not Seeking:"],
       ["A Dilemma for Level-Based Rewards in Sequential,"],
@@ -30,6 +59,11 @@ export const publications = [
   },
   {
     id: "civic-honesty",
+    title: "Do Agents Disclose What the Data Cannot Support? A Live-Data Benchmark for Abstention, Measurement-Uncertainty Caveats, and Missingness Disclosure over Municipal Open Data",
+    authors: "P. Bui",
+    year: "2026",
+    status: "Released as a benchmark",
+    projectId: "civic-honesty-benchmark",
     lines: [
       ["Do Agents Disclose What the Data Cannot Support?"],
       ["A Live-Data Benchmark for Abstention,"],
@@ -38,6 +72,36 @@ export const publications = [
       ["P. Bui, 2026. Released as a benchmark."],
       ["Code and data: ", { text: "civic-honesty-benchmark", href: "https://github.com/phbui/civic-honesty-benchmark" }],
       ["A production model disclosed a findable defect in 0 of 108 answers."],
+    ],
+  },
+  {
+    id: "gailbot-icca",
+    title: "GailBot: A PyPI-Distributed Transcription Pipeline for Conversation-Analytic Research",
+    authors: "Lab demonstration with S. Albert, U. Muhammad, J.P. de Ruiter",
+    venue: "ICCA-26 workshop, Using AI within CA Workflows",
+    place: "University of Alberta",
+    year: "2026",
+    status: "Lab demonstration",
+    projectId: "human-interaction-lab-gailbot",
+    lines: [
+      ["GailBot: A PyPI-Distributed Transcription Pipeline"],
+      ["for Conversation-Analytic Research"],
+      ["Lab demonstration with S. Albert, U. Muhammad,"],
+      ["and J.P. de Ruiter."],
+      ["ICCA-26 workshop, University of Alberta."],
+    ],
+  },
+  {
+    id: "pavement-rttm",
+    title: "Regression to the Mean in Municipal Pavement Condition Panels: Why Year-over-Year Change Overstates Condition-Dependent Deterioration",
+    authors: "P. Bui",
+    year: "2026",
+    status: "Manuscript in preparation",
+    lines: [
+      ["Regression to the Mean in Municipal Pavement"],
+      ["Condition Panels: Why Year-over-Year Change"],
+      ["Overstates Condition-Dependent Deterioration"],
+      ["P. Bui, 2026. Manuscript in preparation."],
     ],
   },
 ];

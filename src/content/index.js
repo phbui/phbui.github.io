@@ -1,6 +1,6 @@
 // One import point for every content module.
 export { profile } from "./profile.js";
-export { industry, research } from "./experience.js";
+export { industry, research, community } from "./experience.js";
 export { education } from "./education.js";
 export { publications } from "./publications.js";
 export { honors } from "./honors.js";
