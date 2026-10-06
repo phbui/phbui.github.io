@@ -117,6 +117,21 @@
   content: "<";
 }
 
+/* Array names in the About code block toggle their contents open and closed. */
+.arrayToggle {
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out, text-shadow 0.1s ease-in-out;
+}
+
+.arrayToggle:hover,
+.arrayToggle:focus-visible {
+  color: red;
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(254, 33, 70, 0.25), 0 0 15px rgba(254, 33, 70, 0.5);
+  outline: none;
+}
+
 .projects {
   z-index: 2;
   display: flex;

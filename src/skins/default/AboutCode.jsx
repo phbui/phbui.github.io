@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import ALink from "./ALink";
 import { files } from "../../assets";
 import {
@@ -32,20 +32,44 @@ const Linked = ({ href, text, download }) => (
 );
 
 // "  const name = () => {  return [ ... ];  };"
-const ArrayBlock = ({ name, pad = "", children }) => (
-  <>
-    <pre>
-      {" "}
-      {"  const "}
-      <span style={{ textDecoration: "underline" }}>{name}</span>
-      {" = () => {" + pad}
-    </pre>
-    <pre> {"    return ["}</pre>
-    {children}
-    <pre> {"    ];"}</pre>
-    <pre> {"  };"}</pre>
-  </>
-);
+// Collapsed by default. The name is the toggle. Closed, the body prints as "[...]".
+const ArrayBlock = ({ name, pad = "", children }) => {
+  const [open, setOpen] = useState(false);
+  const toggle = () => setOpen((o) => !o);
+  return (
+    <>
+      <pre>
+        {" "}
+        {"  const "}
+        <span
+          className="arrayToggle"
+          role="button"
+          tabIndex={0}
+          aria-expanded={open}
+          onClick={toggle}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggle();
+            }
+          }}
+        >
+          {name}
+        </span>
+        {" = () => {" + (open ? pad : "")}
+        {open ? "" : " [...] };"}
+      </pre>
+      {open && (
+        <>
+          <pre> {"    return ["}</pre>
+          {children}
+          <pre> {"    ];"}</pre>
+          <pre> {"  };"}</pre>
+        </>
+      )}
+    </>
+  );
+};
 
 const ExperienceLines = ({ list, lastComma }) =>
   list.map((e, i) => (
@@ -99,7 +123,7 @@ export const AboutCode = () => (
       <ExperienceLines list={community} lastComma={true} />
     </ArrayBlock>
     <br></br>
-    <ArrayBlock name="publications_and_presentations">
+    <ArrayBlock name="publications_presentations">
       {publications.map((pub) => (
         <Fragment key={pub.id}>
           {pub.lines.map((line, j) => (
@@ -114,7 +138,7 @@ export const AboutCode = () => (
       ))}
     </ArrayBlock>
     <br></br>
-    <ArrayBlock name="honors">
+    <ArrayBlock name="honors_awards">
       {honors.map((h) => (
         <pre key={h.id}>
           {"      '"}

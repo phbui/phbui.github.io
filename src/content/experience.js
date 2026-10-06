@@ -9,24 +9,6 @@
 //   roles                  optional list of { title, start, end, place } when one employer had several roles
 export const industry = [
   {
-    id: "ywca",
-    employer: "YWCA Central Massachusetts",
-    role: "Lifeguard, Gym Instructor and Swim Instructor",
-    type: "Part-time",
-    start: "2021-08",
-    end: "2022-06",
-    place: "Worcester, Massachusetts",
-    roles: [
-      { title: "Lifeguard", start: "2021-08", end: "2022-06", place: "Worcester, Massachusetts" },
-      { title: "Swim Instructor", start: "2021-09", end: "2022-06" },
-      { title: "Gym Instructor", start: "2021-12", end: "2022-06", place: "Worcester, Massachusetts" },
-    ],
-    description: "Guarded open-swim and lesson hours at a community pool and performed three lifesaving interventions.",
-    aboutLabel: "YWCA",
-    aboutUrl: "https://ywcacm.org/",
-    about: "Lifeguard, Swim and Gym Instructor, Aug 2021 - Jun 2022",
-  },
-  {
     id: "amazon",
     employer: "Amazon",
     role: "Operations Intern",
@@ -172,6 +154,24 @@ export const research = [
 ];
 
 export const community = [
+  {
+    id: "ywca",
+    employer: "YWCA Central Massachusetts",
+    role: "Lifeguard, Gym Instructor and Swim Instructor",
+    type: "Part-time",
+    start: "2021-08",
+    end: "2022-06",
+    place: "Worcester, Massachusetts",
+    roles: [
+      { title: "Lifeguard", start: "2021-08", end: "2022-06", place: "Worcester, Massachusetts" },
+      { title: "Swim Instructor", start: "2021-09", end: "2022-06" },
+      { title: "Gym Instructor", start: "2021-12", end: "2022-06", place: "Worcester, Massachusetts" },
+    ],
+    description: "Guarded open-swim and lesson hours at a community pool and performed three lifesaving interventions.",
+    aboutLabel: "YWCA",
+    aboutUrl: "https://ywcacm.org/",
+    about: "Lifeguard, Swim and Gym Instructor, Aug 2021 - Jun 2022",
+  },
   {
     id: "untitled",
     employer: "Untitled LLC",
