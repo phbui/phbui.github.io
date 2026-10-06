@@ -52,7 +52,7 @@ export const publications = [
       ["A Dilemma for Level-Based Rewards in Sequential,"],
       ["Embodied Perception"],
       ["P. Bui"],
-      ["Poster, IROS 2026 Full-Shift Robot Co-Workers"],
+      ["Poster, ", { text: "IROS 2026 Full-Shift Robot Co-Workers", href: "https://openreview.net/forum?id=y5JAU3DwZc" }],
       ["workshop (non-archival), Pittsburgh."],
       ["Proper scoring rules reward honest reporting, not seeking."],
     ],

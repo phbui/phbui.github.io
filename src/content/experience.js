@@ -149,7 +149,7 @@ export const research = [
     description: "Researching in the Urban Modeling Group, advised by Dr. Debra Laefer. Presented at IROS: Full-Shift Robot Co-Workers 2026.",
     aboutLabel: "NYU",
     aboutUrl: "https://www.nyu.edu/",
-    about: [{ text: "Urban Modeling Group", href: "https://engineering.nyu.edu/" }, ", Aug 2026 - present"],
+    about: [{ text: "Urban Modeling Group", href: "https://wp.nyu.edu/urbanmodeling/" }, ", Aug 2026 - present"],
   },
 ];
 
