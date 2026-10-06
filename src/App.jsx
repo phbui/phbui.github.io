@@ -90,6 +90,13 @@ const App = () => {
           {"');"}
         </pre>
         <pre>
+          {"  const academic = fetch('"}
+          <a href="/academic/">
+            <ALink text="Academic" />
+          </a>
+          {"');"}
+        </pre>
+        <pre>
           {"\n"}
           {"  let undergrad = '"}
           <a href="https://www.wpi.edu/academics/study/computer-science-bs">
@@ -99,7 +106,7 @@ const App = () => {
           <a href="https://www.wpi.edu/">
             <ALink text="WPI" />
           </a>
-          {"';"}
+          {" (2021-2023)';"}
         </pre>
         <pre>
           {"  let grad_1 = '"}
@@ -110,7 +117,7 @@ const App = () => {
           <a href="https://www.tufts.edu/">
             <ALink text="Tufts" />
           </a>
-          {"';"}
+          {" (2024-2025)';"}
         </pre>
         <pre>
           {"  let grad_2 = '"}
@@ -121,7 +128,7 @@ const App = () => {
           <a href="https://www.nyu.edu/">
             <ALink text="NYU" />
           </a>
-          {"';"}
+          {" (2026-present)';"}
         </pre>
         <br></br>
         <pre>
@@ -147,7 +154,7 @@ const App = () => {
           <a href="https://www.cyvl.com/">
             <ALink text="CYVL" />
           </a>
-          {": 'Full-Stack Software Engineer'}"}
+          {": 'Full-Stack Software Engineer, 2025-2026'}"}
         </pre>
         <pre> {"    ];"}</pre>
         <br></br>
@@ -182,7 +189,7 @@ const App = () => {
           <a href="https://www.afrl.af.mil/">
             <ALink text="Air Force Research Laboratory" />
           </a>
-          {"'},"}
+          {", summer 2025'},"}
         </pre>
         <pre> {"    ];"}</pre>
         <pre> {"  };"}</pre>
@@ -199,8 +206,8 @@ const App = () => {
         <pre>{"const Contact = {            "} </pre>
         <pre>
           {"  {email: "}
-          <a href="mailto:phi@cyvl.ai">
-            <ALink text="phi@cyvl.ai" />
+          <a href="mailto:pb2963@nyu.edu">
+            <ALink text="pb2963@nyu.edu" />
           </a>
           {"},"}
         </pre>
