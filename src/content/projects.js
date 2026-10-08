@@ -12,6 +12,18 @@ const LINKEDIN = "https://www.linkedin.com/in/phi-bui/";
 
 export const projects = [
   {
+    id: "gestalt-core",
+    title: "gestalt-core",
+    track: "academic",
+    image: "gestaltCore",
+    link: "https://github.com/phbui/gestalt-core",
+    text: "Memory and search for coding agents. SQLite full-text and vector search fused by rank fusion, scored on two public BEIR datasets.",
+    dates: "2026",
+    organization: "Independent project",
+    tags: ["retrieval", "agent memory", "benchmark"],
+    long: "A Markdown knowledge base searched by SQLite FTS5 BM25 and nomic-embed dense vectors, fused by reciprocal rank fusion, with session hooks and skills for Claude Code and Cursor. On BEIR it scores nDCG@10 of 0.737 on SciFact and 0.361 on NFCorpus, above both of its own legs in paired permutation tests. Code, per-query results and a one-command rerun are public.",
+  },
+  {
     id: "human-interaction-lab-gailbot",
     title: "Human Interaction Lab: GailBot",
     track: "academic",

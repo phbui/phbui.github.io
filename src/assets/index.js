@@ -10,10 +10,11 @@ import tarot from "./tarot.jpg";
 import tufts from "./tufts.jpg";
 import hilab from "./hilab.jpg";
 import hami from "./hami.jpg";
+import gestaltCore from "./gestalt-core.png";
 import background from "./background.jpg";
 import resume from "./Philip Bui - Resume.pdf";
 import cv from "./Philip Bui - CV.pdf";
 
-export const images = { chatgpt, wpi, mgbwh, mainEra, untitled, tarot, tufts, hilab, hami };
+export const images = { chatgpt, wpi, mgbwh, mainEra, untitled, tarot, tufts, hilab, hami, gestaltCore };
 export const files = { resume, cv };
 export { background };
