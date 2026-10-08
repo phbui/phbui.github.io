@@ -22,7 +22,9 @@
   top: 80px;
   left: 80px;
   width: 0;
-  height: calc(5vw + 6vh + 0.5vmin);
+  /* Tall enough for every nav item, with the same breathing room below as above. */
+  height: fit-content;
+  padding-bottom: calc(1vw + 1vh + 0.25vmin);
   border: 1.5px solid white;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.25),
     0 0 10px rgba(255, 255, 255, 0.5);
@@ -182,6 +184,12 @@
 .projectText a {
   display: inline;
   padding: 0;
+}
+
+/* Nav links with an href (the academic page) get no browser underline. The white underline
+   still appears on hover from .links:hover. */
+a.navBar {
+  text-decoration: none;
 }
 
 .navBar * {
