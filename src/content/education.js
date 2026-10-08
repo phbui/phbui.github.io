@@ -43,6 +43,6 @@ export const education = [
     schoolUrl: "https://www.nyu.edu/",
     start: "2026-09",
     end: null,
-    notes: "Advised by Dr. Debra Laefer, Urban Modeling Group. Studying honest uncertainty in urban infrastructure sensing.",
+    notes: "Advised by Dr. Debra Laefer, Urban Modeling Group. Thesis: Understand, Standardize, Mitigate: Uncertainty in 3D Models of Urban Environments for Autonomous Decision-Making.",
   },
 ];
