@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 import ALink from './ALink';
+import { profile } from '../../content';
 
 const NavBar = ({ refs }) => {
-  console.log(refs)
   const handleClick = useCallback(
     (ref) => (e) => {
       e.preventDefault(); 
@@ -26,12 +26,21 @@ const NavBar = ({ refs }) => {
     { label: 'about', ref: refs.aboutRef },
     { label: 'contact', ref: refs.contactRef },
   ];
+  // External pages open in a new tab instead of scrolling. Content lives in profile.pages.
+  const pageItems = profile.pages.map((p) => ({ label: p.label.toLowerCase(), href: p.href }));
 
   return (
     <div className="accentLine">
       {navItems.map((item, index) => (
         <pre key={index} className="preText">
           <a onClick={handleClick(item.ref)} className="navBar">
+            <ALink text={item.label} />
+          </a>
+        </pre>
+      ))}
+      {pageItems.map((item) => (
+        <pre key={item.label} className="preText">
+          <a href={item.href} target="_blank" rel="noopener noreferrer" className="navBar">
             <ALink text={item.label} />
           </a>
         </pre>
