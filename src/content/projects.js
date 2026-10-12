@@ -17,11 +17,11 @@ export const projects = [
     track: "academic",
     image: "gestaltCore",
     link: "https://github.com/phbui/gestalt-core",
-    text: "Memory and search for coding agents. SQLite full-text and vector search fused by rank fusion, scored on two public BEIR datasets.",
+    text: "Local search over Markdown notes for coding agents. Dense vectors in SQLite with an optional reranker, scored on three public BEIR datasets.",
     dates: "2026",
     organization: "Independent project",
     tags: ["retrieval", "agent memory", "benchmark"],
-    long: "A Markdown knowledge base searched by SQLite FTS5 BM25 and nomic-embed dense vectors, fused by reciprocal rank fusion, with session hooks and skills for Claude Code and Cursor. On BEIR it scores nDCG@10 of 0.737 on SciFact and 0.361 on NFCorpus, above both of its own legs in paired permutation tests. Code, per-query results and a one-command rerun are public.",
+    long: "A Markdown knowledge base for Claude Code and Cursor, searched by stella_en_400M_v5 dense vectors in SQLite with BM25 as the lexical fallback and an optional Qwen3-Reranker-0.6B rerank, plus session hooks and skills. On three public BEIR benchmarks it scores nDCG@10 of 0.794 on SciFact, 0.422 on NFCorpus and 0.572 on FiQA, reported with 95% bootstrap intervals and paired permutation tests. Apache-2.0, with code, per-query results, a one-command rerun and a Zenodo DOI (10.5281/zenodo.23324594).",
   },
   {
     id: "human-interaction-lab-gailbot",
