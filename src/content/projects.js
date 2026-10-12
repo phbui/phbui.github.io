@@ -13,7 +13,7 @@ const LINKEDIN = "https://www.linkedin.com/in/phi-bui/";
 export const projects = [
   {
     id: "gestalt-core",
-    title: "gestalt-core",
+    title: "Gestalt",
     track: "academic",
     image: "gestaltCore",
     link: "https://github.com/phbui/gestalt-core",
