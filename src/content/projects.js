@@ -70,7 +70,7 @@ export const projects = [
     track: "academic",
     image: "hami",
     link: "https://github.com/phbui/civic-honesty-benchmark",
-    text: "A live-data benchmark over a municipal open-data API, run on ten model settings from six families with the evaluation environment as a factor. The dataset and 32,620 episode logs are public. The paper is listed under Publications and Presentations.",
+    text: "A live-data benchmark over a municipal open-data API, run on ten model settings from six families with the evaluation environment as a factor. The dataset and 44,541 episode records are public (v1.3.0). The paper is listed under Publications and Presentations.",
     dates: "Aug to Oct 2026",
     organization: "Independent research",
     tags: ["LLM evaluation", "open data", "benchmark"],
